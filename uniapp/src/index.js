@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'react-redux'
+import { applyMiddleware } from 'redux';
+import ThunkMiddleware  from 'redux-thunk'; // allows for using async func
+import axios from 'axios';
+import { composeWithDevTools } from 'redux-devtools-extension'
+
+const middleware = composeWithDevTools(
+  applyMiddleware(ThunkMiddleware.withExtraArgument({axios}))
+)
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
