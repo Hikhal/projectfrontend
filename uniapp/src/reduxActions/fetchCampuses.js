@@ -21,6 +21,7 @@ export const fetchAllCampusesThunk = () => {
     return async (dispatch) => {
         try {
             const datalist = await axios.get('http://localhost:8080/api/campuses')
+            console.log(datalist.data)
             dispatch(fetchAllCampuses(datalist.data))
         } catch (error) {
             console.log(error)

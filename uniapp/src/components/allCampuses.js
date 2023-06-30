@@ -8,20 +8,22 @@ const AllCampuses = () => {
 
     useEffect(()=>{
       dispatch(fetchAllCampusesThunk())
+      return () => {
+        dispatch({type: "CLEAR_ALL_STATES"})
+      }
     }, [dispatch])
 
     return(
         <div>
-      {listOfCampuses.map((item) => (
+         {
+      listOfCampuses.map((item) => (
         <div key={item.id}>
-          {/* Render the content from the item object */}
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          {/* Add additional content as needed */}
+          <pre>{JSON.stringify(item, null, 2)}</pre>
         </div>
-      ))}
-    </div>
-  );
+      ))
+    }
+        </div>
+      );
 }
 
 export default AllCampuses
