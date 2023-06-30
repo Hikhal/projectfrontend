@@ -15,19 +15,20 @@ const AllCampuses = () => {
       }
     }, [dispatch])
 
-    return(
-        <div>
-           <Link to="/addCampus">Add Campus</Link>
-         {
-      listOfCampuses.map((item) => (
-        <div>
-          <h1 key = {item.id}> {item.name}</h1>
-          {/* <pre key={item.id}>{JSON.stringify(item, null, 2)}</pre> */}
-        </div>
-      ))
-    }
-        </div>
-      );
+    return (
+      <div>
+        <Link to="/addCampus">Add Campus</Link>
+        {listOfCampuses.map((item) => (
+          <div key={item.id} className="campus-card">
+            <h1>{item.name}</h1>
+            <p className="campus-address">Address: {item.address}</p>
+            <img src={item.image} alt="Campus" className="campus-image" />
+            <p className="campus-description">Description: {item.description}</p>
+          </div>
+        ))}
+      </div>
+    );
+    
 }
 
 export default AllCampuses
