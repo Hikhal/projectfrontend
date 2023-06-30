@@ -3,6 +3,7 @@ import React from 'react';
 
 const Home = () => {
   return (
+    
     <div className="homepage">
       <h1>Welcome to Our University!</h1>
       <p>Experience the excellence of education and discover talented students across various programs.</p>
