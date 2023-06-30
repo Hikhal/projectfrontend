@@ -4,7 +4,7 @@ const initialState = []
 const getAllStudentsReducer = (state = initialState, action)=>{
     switch(action.type){
         case 'FETCHSTUDENTS':
-            return state = [...state, action.payload]
+            return state = [...state, ...action.payload]
         case 'CLEAR_ALL_STATES':
             state = []
         default:

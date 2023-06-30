@@ -3,7 +3,7 @@ import axios from 'axios'
 // creating action
  const actiontype = 'FETCHSTUDENTS'
 
-export const fetchAllCampuses = (payload) => {
+export const fetchAllStudents = (payload) => {
     // console logging for testing
     console.log("fetching all STUDENTS action")
     return {
@@ -22,7 +22,7 @@ export const fetchAllStudentsThunk = () => {
         try {
             const datalist = await axios.get('http://localhost:8080/api/students')
             console.log(datalist.data)
-            dispatch(fetchAllCampuses(datalist.data))
+            dispatch(fetchAllStudents(datalist.data))
         } catch (error) {
             console.log(error)
         }

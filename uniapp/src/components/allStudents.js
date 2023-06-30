@@ -1,4 +1,3 @@
-
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllStudentsThunk } from '../reduxActions/fetchStudents'
@@ -19,13 +18,14 @@ const AllStudents = () => {
        {
     listOfStudents.map((item) => (
       <div key={item.id}>
-        <pre>{JSON.stringify(item, null, 2)}</pre>
+        {item.firstName}
+        {item.lastName}
       </div>
     ))
   }
       </div>
     );
-      
+
 }
 
 export default AllStudents;

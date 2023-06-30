@@ -4,7 +4,7 @@ import { fetchAllCampusesThunk } from '../reduxActions/fetchCampuses'
 const AllCampuses = () => {
     const dispatch = useDispatch()
     const listOfCampuses = useSelector(state => state.getCampuses )
-    console.log(listOfCampuses)
+    console.log("--> campuses",listOfCampuses[0])
 
     useEffect(()=>{
       dispatch(fetchAllCampusesThunk())
@@ -17,8 +17,9 @@ const AllCampuses = () => {
         <div>
          {
       listOfCampuses.map((item) => (
-        <div key={item.id}>
-          <pre>{JSON.stringify(item, null, 2)}</pre>
+        <div>
+          <h1 key = {item.id}> {item.name}</h1>
+          {/* <pre key={item.id}>{JSON.stringify(item, null, 2)}</pre> */}
         </div>
       ))
     }
