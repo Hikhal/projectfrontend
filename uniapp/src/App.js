@@ -19,8 +19,6 @@ function App() {
         <Route path = '/allCampuses' element = {<AllCampuses></AllCampuses>} />
         <Route path = '/allStudents' element = {<AllStudents></AllStudents>} />
         <Route path = '/addstudent' element = {<AddStudent></AddStudent>} />
-        
-
       </Routes>
     </Router>
   );
