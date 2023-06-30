@@ -121,6 +121,13 @@
 
    /* Sidebar CSS */
 /* Global Styles */
+:root {
+  --primary-color: #6258FE;
+  --primary-color-dark: #7771F6;
+  --button-color: #5433FF;
+  --button-colot-shadow: #5433FF30;
+  --text-color: white;
+}
 body {
   margin: 0;
   padding: 0;
