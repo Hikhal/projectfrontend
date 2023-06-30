@@ -14,20 +14,39 @@ const AllStudents = () => {
       }
     }, [dispatch])
 
-    return(
-      <div>
-       {
-    listOfStudents.map((item) => (
-      <div key={item.id}>
-        {item.firstName}
-        {item.lastName}
-      </div>
-    ))
-  }
-  <Link to = "/addstudent">Add Student</Link>
+    return (
+      <div className="card-container">
+        {listOfStudents.map((item) => (
+          <div key={item.id} className="student-card">
+            <img src={item.image} alt="Student" className="student-image" />
+            <div className="student-info">
+              <div className="info-item">
+                <span className="info-label">First Name:</span>
+                <span className="info-value">{item.firstName}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Last Name:</span>
+                <span className="info-value">{item.lastName}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Address:</span>
+                <span className="info-value">{item.address}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Email:</span>
+                <span className="info-value">{item.email}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">GPA:</span>
+                <span className="info-value">{item.gpa}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+        <Link to="/addstudent">Add Student</Link>
       </div>
     );
-
+    
 }
 
 export default AllStudents;
