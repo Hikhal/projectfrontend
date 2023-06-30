@@ -18,7 +18,7 @@ export const fetchAllCampuses = (payload) => {
  */
 
 export const fetchAllCampusesThunk = () => {
-    const apikey = ''
+    const apikey = 'http://localhost:8080/api/campuses'
     return async (dispatch) => {
         try {
             const datalist = await axios.get(api)
