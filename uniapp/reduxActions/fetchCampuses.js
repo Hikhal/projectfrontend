@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // creating action
-const actiontype = 'FETCHCAMPUSES'
+ const actiontype = 'FETCHCAMPUSES'
 
 export const fetchAllCampuses = (payload) => {
     // console logging for testing
