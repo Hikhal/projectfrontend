@@ -9,10 +9,11 @@ function App() {
   return (
     // will add a nav bar.
     <Router>
-      <div>
-      <Link to = "/allCampuses"> All Campuses</Link>
-      <Link to = "/allStudents"> All Student</Link>
-      </div>
+       <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/allCampuses">All Campuses</Link>
+        <Link to="/allStudents">All Students</Link>
+      </nav>
       <Routes>
         <Route path = '/' element = {<Home></Home>} />
         <Route path = '/allCampuses' element = {<AllCampuses></AllCampuses>} />
