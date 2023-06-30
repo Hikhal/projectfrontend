@@ -1,6 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 
+/**
+ * The component contains an input field for each attribute of a student (first name, last name, address, image, email, and GPA). 
+ * It uses React hooks to maintain state for each of these fields and updates these state variables whenever the corresponding input field changes.
+ *  When the form is submitted, it creates a new student object with the current values of the input fields
+ *  and sends a POST request to add this student to a database. 
+ * After submitting, it clears the input fields.
+ */
+
 const AddStudent = () => {
     const [firstName, setfirstname] = useState("")
     const [lastName, setlastname] = useState("")
@@ -11,6 +19,8 @@ const AddStudent = () => {
     const [newstudent,setnewstudent] = useState(undefined)
 
 
+    // Each of these functions are called when the corresponding input field value changes
+    // They update the state variable to reflect the current input value
     const setFirstName = (event) =>{
         setfirstname(event.target.value)
     }
@@ -30,8 +40,10 @@ const AddStudent = () => {
         setgpa(event.target.value)
      }
      const HandleSubmit = async (event) => {
+        // This prevents the default form submission behavior
         event.preventDefault();
     
+        // Creating a newStudent object from the current input field values
         const newStudent = {
             firstName,
             lastName,
@@ -41,12 +53,18 @@ const AddStudent = () => {
             gpa
         }
         
-        // Set state if you need to use the new student elsewhere
+        // Update the newstudent state variable, in case it needs to be used elsewhere
         setnewstudent(newstudent);
         
-        //
-    
-        // Now call your addStudent function directly with newStudent
+        // once data is submitted, clear all input fields.
+        setfirstname("")
+        setlastname("")
+        setaddress("")
+        setimage("")
+        setemail("")
+        setgpa("")
+
+        // Posting the newStudent object to the server which then would handle the database submission
         try {
             const submission = await axios.post('http://localhost:8080/api/students', newStudent);
         } catch (error) {
