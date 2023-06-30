@@ -5,8 +5,6 @@ const Home = ()=> {
     return (
         <div>
             <h1>Home</h1>
-            <Link to = "/allCampuses"> All Campuses</Link>
-            <Link to = "/allStudents"> All Students</Link>
         </div>
     )
 
