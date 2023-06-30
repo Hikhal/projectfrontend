@@ -4,6 +4,7 @@ import AllCampuses from "./components/allCampuses";
 import './App.css';
 import AllStudents from "./components/allStudents";
 import AddStudent from "./components/addstudent";
+import AddCampus from "./components/addCampus";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path = '/allCampuses' element = {<AllCampuses></AllCampuses>} />
         <Route path = '/allStudents' element = {<AllStudents></AllStudents>} />
         <Route path = '/addstudent' element = {<AddStudent></AddStudent>} />
+        <Route path = '/addCampus' element = {<AddCampus/>} />
       </Routes>
     </Router>
   );

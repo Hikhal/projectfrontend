@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllCampusesThunk } from '../reduxActions/fetchCampuses'
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+
 const AllCampuses = () => {
     const dispatch = useDispatch()
     const listOfCampuses = useSelector(state => state.getCampuses )
@@ -15,6 +17,7 @@ const AllCampuses = () => {
 
     return(
         <div>
+           <Link to="/addCampus">Add Campus</Link>
          {
       listOfCampuses.map((item) => (
         <div>

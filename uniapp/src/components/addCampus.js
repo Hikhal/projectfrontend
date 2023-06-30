@@ -70,6 +70,5 @@ const AddCampus = () => {
             </form>
         </div>
     )
-
-
 }
+export default AddCampus
