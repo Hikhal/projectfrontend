@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllStudentsThunk } from '../reduxActions/fetchStudents'
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 const AllStudents = () => {
     const dispatch = useDispatch()
     const listOfStudents = useSelector(state => state.getStudents )
@@ -23,6 +24,7 @@ const AllStudents = () => {
       </div>
     ))
   }
+  <Link to = "/addstudent">Add Student</Link>
       </div>
     );
 
