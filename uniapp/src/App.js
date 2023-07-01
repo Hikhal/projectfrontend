@@ -20,14 +20,12 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchAllStudentsThunk());
     dispatch(fetchAllCampusesThunk())
+    return () => {
+      dispatch({type: "CLEAR_ALL_STATES"})
+     }
     
   }, [dispatch]);
   
-
-
-
-
-
   return (
     <Router>
       <div className="container">

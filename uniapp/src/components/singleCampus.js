@@ -34,13 +34,38 @@ const SingleCampusInfo = () => {
     // logging to see if the students list is retrieved 
     console.log("students -->", students)
 
+    // Now the goal is to display the students by campuses, this can be achieved by filtering the array by matching the campusId
+
+    const campusStudents = students.filter((student) => {
+        return student.campusId == id
+    })
+
+    console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
-      <div>
-        <img src={campus.img} alt="Campus" />
-        <h1>Campus Name: {campus.name}</h1>
-        <h1>Campus Address: {campus.address}</h1>
-        <h1>Campus Description: {campus.description}</h1>
-      </div>
+        students.length > 0 && (
+            <div>
+                <img src={campus.img} alt="Campus" />
+                <h1>Campus Name: {campus.name}</h1>
+                <h1>Campus Address: {campus.address}</h1>
+                <h1>Campus Description: {campus.description}</h1>
+    
+                <div>
+                    <h1>Students: </h1>
+                    <div>
+                        {campusStudents.length === 0 ? (
+                            <p>Campus does not contain students yet</p>
+                        ) : (
+                            students.map((item) => (
+                                <div key={item.id}>
+                                    <p><strong>First Name:</strong> {item.firstName} <strong>Last Name:</strong> {item.lastName}</p>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+            </div>
+        )
     );
+    
 };
 export default SingleCampusInfo
