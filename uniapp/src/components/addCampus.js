@@ -62,7 +62,7 @@ const AddCampus = () => {
     return(
         <div>
             <form className='campus-form'>
-                <h2>Add Campus</h2>
+                <h2>Enter New Campus Information</h2>
                 <input type='text' placeholder='Campus Name' value={name} onChange={setName}></input>
                 <input type='text' placeholder='Campus Image' value={image} onChange={setImg}></input>
                 <input type='text' placeholder='Campus Address' value={address} onChange={setAddress}></input>
