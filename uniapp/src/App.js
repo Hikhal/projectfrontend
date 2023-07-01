@@ -43,7 +43,11 @@ const App = () => {
     <Router>
       <div className="container">
         <nav className="sidebar">
-          <ul>
+          <span class ="expand-btn">
+            <img src="assests/chevron.svg" alt="Chevron" />
+          </span>
+          <div class ="sidebar-links">
+              <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -54,13 +58,14 @@ const App = () => {
               <Link to="/allStudents">All Students</Link>
             </li>
           </ul>
+            </div>
         </nav>
         <div className="content">
-          <nav className="navbar">
+          {/* <nav className="navbar">
             <Link to="/">Home</Link>
             <Link to="/allCampuses">All Campuses</Link>
             <Link to="/allStudents">All Students</Link>
-          </nav>
+          </nav> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/allCampuses" element={<AllCampuses />} />

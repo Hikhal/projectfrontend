@@ -43,7 +43,7 @@ const AllStudents = () => {
             </div>
           </div>
         ))}
-        <Link to="/addstudent">Add Student</Link>
+        <Link to="/addstudent" className='addstudent-link'>Add Student</Link>
       </div>
     );
     

@@ -17,7 +17,7 @@ const AllCampuses = () => {
 
     return (
       <div>
-        <Link to="/addCampus">Add Campus</Link>
+        <Link to="/addCampus" className='addcampus-link'>Add Campus</Link>
         {listOfCampuses.map((item) => (
           <div key={item.id} className="campus-card">
             <h1>{item.name}</h1>
