@@ -6,6 +6,7 @@ import AllCampuses from './components/allCampuses';
 import AllStudents from './components/allStudents';
 import AddStudent from './components/addstudent';
 import AddCampus from './components/addCampus';
+import SingleCampusInfo from './components/singleCampus';
 import './App.css';
 
 const App = () => {
@@ -42,6 +43,9 @@ const App = () => {
             <Route path="/allStudents" element={<AllStudents />} />
             <Route path="/addstudent" element={<AddStudent />} />
             <Route path="/addCampus" element={<AddCampus />} />
+            {/* This Route contains a dynamic segment (the `:id` part). It is a placeholder for 
+              the actual value that will be part of the URL when navigating to the 'SingleCampusInfo' route. */}
+            <Route path="/singleCampus/:id" element={<SingleCampusInfo />} />
           </Routes>
         </div>
       </div>
