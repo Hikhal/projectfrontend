@@ -30,7 +30,10 @@ const SingleCampusInfo = () => {
 
     return (
       <div>
-        <h1>id: {id}</h1>
+        <img src={campus.img} alt="Campus" />
+        <h1>Campus Name: {campus.name}</h1>
+        <h1>Campus Address: {campus.address}</h1>
+        <h1>Campus Description: {campus.description}</h1>
       </div>
     );
 };
