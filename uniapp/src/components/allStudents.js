@@ -19,7 +19,7 @@ const AllStudents = () => {
         {listOfStudents.map((item) => (
           <div key={item.id} className="student-card">
             <img src={item.image} alt="Student" className="student-image" />
-            <div className="student-info">
+            <span className="student-info">
               <div className="info-item">
                 <span className="info-label">First Name:</span>
                 <span className="info-value">{item.firstName}</span>
@@ -40,7 +40,7 @@ const AllStudents = () => {
                 <span className="info-label">GPA:</span>
                 <span className="info-value">{item.gpa}</span>
               </div>
-            </div>
+            </span>
           </div>
         ))}
         <Link to="/addstudent">Add Student</Link>
