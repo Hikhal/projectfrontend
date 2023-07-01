@@ -25,6 +25,7 @@ const AllStudents = () => {
                 <span className="info-label">Last Name:</span>
                 <span className="info-value">{item.lastName}</span>
               </div>
+              {/* Display the Campus name, if a student is not found is will display "N/A" */}
               <div className="info-item">
                 <span className="info-label">Campus:</span>
                 <span className="info-value">{campus ? campus.name : 'N/A'}</span>
