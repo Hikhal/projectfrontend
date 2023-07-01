@@ -59,9 +59,10 @@ const AddCampus = () => {
         }
     }
 
+    // Bug found on line 65, onSumbit was missing.
     return(
         <div>
-            <form className='campus-form'>
+            <form className='campus-form' onSubmit={handleSubmit}> 
                 <h2>Enter New Campus Information</h2>
                 <input type='text' placeholder='Campus Name' value={name} onChange={setName}></input>
                 <input type='text' placeholder='Campus Image' value={img} onChange={setImg}></input>
@@ -69,6 +70,7 @@ const AddCampus = () => {
                 <input type='text' placeholder='Campus Description' value={description} onChange={setDescription}></input>
                 <button type="submit">Submit</button>
             </form>
+            
         </div>
     )
 }
