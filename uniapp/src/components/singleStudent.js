@@ -25,11 +25,13 @@ const SingleStudentInfo = () => {
     // get the campus the student is associated with.
     // first we will get the list of campuses from our redux store
     const campuslist = useSelector(state => state.getCampuses)
-    console.log("campuses -->",campuslist)
+    //console.log("campuses -->",campuslist)
+    console.log( "student id",studentInfo.campusId)
     // filter campus that will return what campus the student belongs to
     const studentCamp = campuslist.find((campus) => campus.id === studentInfo.campusId);
+    //console.log(studentCamp)
 
-    //const campusName = studentCamp ? studentCamp.name : "Not enrolled in any campus yet.";
+    const campusName = studentCamp ? studentCamp.name : "Not enrolled in any campus yet.";
    
     return (
         <div>
@@ -45,7 +47,7 @@ const SingleStudentInfo = () => {
              <br></br>
              <p1> <strong>GPA:</strong> {studentInfo.gpa}</p1>
              <br></br>
-             <p1><strong>Campus:</strong> {studentCamp == null? studentCamp.name : "Not enrolled in any campus yet." }</p1>
+             <p1><strong>Campus:</strong> {cam }</p1>
             <br></br>
         </div>
     )
