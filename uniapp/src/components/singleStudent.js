@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { UseSelector } from "react-redux/es/hooks/useSelector";
+import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -23,6 +23,15 @@ const SingleStudentInfo = () => {
     }, [id])
 
     // get the campus the student is associated with.
+    // first we will get the list of campuses from our redux store
+    const campuslist = useSelector(state => state.getCampuses)
+    console.log(campuslist)
+    // filter campus that will return what campus the student belongs to
+    const studentCamp = campuslist.find((item) => {
+        return item.id === studentInfo.campusId;
+      });
+
+      const campusName = studentCamp ? studentCamp.name : "Not enrolled in any campus yet.";
     return (
         <div>
              <img src={studentInfo.image} alt="Student"/>
@@ -37,6 +46,8 @@ const SingleStudentInfo = () => {
              <br></br>
              <p1> <strong>GPA:</strong> {studentInfo.gpa}</p1>
              <br></br>
+             <p1><strong>Campus:</strong> {campusName }</p1>
+            <br></br>
         </div>
     )
 }
