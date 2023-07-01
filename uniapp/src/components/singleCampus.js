@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 // This is a functional component for displaying individual campus information
 const SingleCampusInfo = () => {
@@ -27,6 +28,11 @@ const SingleCampusInfo = () => {
         getCamp()
 
     } ,[id])
+    
+    // getting the list of the students from the redux store
+    const students = useSelector(state => state.getStudents)
+    // logging to see if the students list is retrieved 
+    console.log("students -->", students)
 
     return (
       <div>

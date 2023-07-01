@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import AllCampuses from './components/allCampuses';
@@ -7,9 +7,27 @@ import AllStudents from './components/allStudents';
 import AddStudent from './components/addstudent';
 import AddCampus from './components/addCampus';
 import SingleCampusInfo from './components/singleCampus';
+import { useDispatch } from 'react-redux';
 import './App.css';
+import { fetchAllStudentsThunk } from './reduxActions/fetchStudents';
+import { fetchAllCampusesThunk } from './reduxActions/fetchCampuses';
 
 const App = () => {
+  // we would want the state to update as we mount the App so that we could
+  // use that data elsewhere in our components without having the need to dispatch the actions
+  // inside every component.
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchAllStudentsThunk());
+    dispatch(fetchAllCampusesThunk())
+    
+  }, [dispatch]);
+  
+
+
+
+
+
   return (
     <Router>
       <div className="container">

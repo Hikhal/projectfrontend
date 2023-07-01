@@ -5,16 +5,9 @@ import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import SingleCampusInfo from './singleCampus';
 
 const AllCampuses = () => {
-    const dispatch = useDispatch()
     const listOfCampuses = useSelector(state => state.getCampuses )
     console.log("--> campuses",listOfCampuses)
 
-    useEffect(()=>{
-      dispatch(fetchAllCampusesThunk())
-      return () => {
-        dispatch({type: "CLEAR_ALL_STATES"})
-      }
-    }, [dispatch])
 
     return (
       <div>
