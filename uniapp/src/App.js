@@ -39,10 +39,10 @@ const App = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/allCampuses">All Campuses</Link>
+              <Link to="/allCampuses">Campuses</Link>
             </li>
             <li>
-              <Link to="/allStudents">All Students</Link>
+              <Link to="/allStudents">Students</Link>
             </li>
           </ul>
             </div>
