@@ -34,7 +34,7 @@ const SingleCampusInfo = () => {
     // logging to see if the students list is retrieved 
     console.log("students -->", students)
 
-    // Now the goal is to display the students by campuses, this can be achieved by filtering the array by matching the campusId
+    // Now the goal is to display the students by campuses, this can be achieved by filtering the array by matching the campusId and only displaying those students.
 
     const campusStudents = students.filter((student) => {
         return student.campusId == id
