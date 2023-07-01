@@ -189,7 +189,7 @@ body {
 }
 
 .campus-form button:hover {
-  background-color: pink;
+  background-color: grey;
 }
 
 /*add student form */
@@ -222,9 +222,9 @@ body {
 }
 
 .student-form button:hover {
-  background-color: pink;
+  background-color: grey;
 }
-/*Student add button*/
+/*Student submit add button*/
 .addstudent-link {
   display: inline-block;
   padding: 10px 20px;
@@ -236,10 +236,10 @@ body {
 }
 
 .addstudent-link:hover {
-  background-color: #555;
+  background-color: grey;
 }
 
-/* Campus add button*/
+/* Campus submit add button*/
 .addcampus-link {
   display: inline-block;
   padding: 10px 20px;
@@ -251,6 +251,6 @@ body {
 }
 
 .addcampus-link:hover {
-  background-color: #555;
+  background-color: grey;
 }
 
