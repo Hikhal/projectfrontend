@@ -35,6 +35,21 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
+        //name.trim() will return a falsey value if the the name is only whitespace or empty
+        if (!name.trim()) {
+            alert('Name is required');
+            return;
+        }
+
+        const nameRegex = /^[A-Za-z0-9]+$/;
+        if (!nameRegex.test(name)) {
+            alert('Name should contain only alphabets');
+            return;
+        }
+
+
+
+
         // Create campus Object
         const campus = {
             name,
