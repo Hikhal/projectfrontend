@@ -7,6 +7,7 @@ import AllStudents from './components/allStudents';
 import AddStudent from './components/addstudent';
 import AddCampus from './components/addCampus';
 import SingleCampusInfo from './components/singleCampus';
+import SingleStudentInfo from './components/singleStudent';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import { fetchAllStudentsThunk } from './reduxActions/fetchStudents';
@@ -62,6 +63,7 @@ const App = () => {
             {/* This Route contains a dynamic segment (the `:id` part). It is a placeholder for 
               the actual value that will be part of the URL when navigating to the 'SingleCampusInfo' route. */}
             <Route path="/singleCampus/:id" element={<SingleCampusInfo />} />
+            <Route path="/singleStudent/:id" element={<SingleStudentInfo />} />
           </Routes>
         </div>
       </div>
