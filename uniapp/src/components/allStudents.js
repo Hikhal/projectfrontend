@@ -15,17 +15,14 @@ const AllStudents = () => {
           
         <div className="card-container">
           {listOfStudents.map((item) => (
-            <div key={item.id} className="student-card">
-              <img src={item.image} alt="Student" className="student-image" />
+            <div key={item.id} className="cards">
+              <img src={item.image} alt="Student" className="cards-image" />
               <span className="student-info">
                 <div className="info-item">
-                  <span className="info-label">First Name:</span>
-                  <span className="info-value">{item.firstName}</span>
+                  <h3 className="info-label">First Name:{item.firstName}</h3>
                 </div>
                 <div className="info-item">
-                  <span className="info-label">Last Name:</span>
-                  <span className="info-value">{item.lastName}</span>
-
+                  <h3 className="info-label">Last Name:{item.lastName}</h3>
                   <br/>
                   <Link to={`/singleStudent/${item.id}`} >View Details</Link>
                 </div>
