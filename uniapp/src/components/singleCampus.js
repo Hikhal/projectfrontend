@@ -16,8 +16,12 @@ const SingleCampusInfo = () => {
     // the api call to the server would be made in order to display the info of the campus.
 
     const [campus, setCampus] = useState("")
+    // Declare a new state variable, "showAddStudent", which we'll use to control the visibility of the "AddStudent" component.
+    // The initial value of "showAddStudent" is set to false.       
     const [showAddStudent, setShowAddStudent] = useState(false);
 
+    // This function is a click event handler for the "Add Student" button. 
+    // When the button is clicked, it will set the "showAddStudent" state to true, making the "AddStudent" component visible.
     const handleClick = () => {
       setShowAddStudent(true);
     };
@@ -52,7 +56,10 @@ const SingleCampusInfo = () => {
         students.length > 0 && (
             <div>
                <button onClick={handleClick}> Add Student </button>
+               {/* If showAddStudent is true, the <AddStudent> component is rendered.
+                 If showAddStudent is false, the <AddStudent> component is not rendered.*/}
                 {showAddStudent && <AddStudent campusid={id} />} 
+                <br></br>
                 <img src={campus.img} alt="Campus" />
                 <h1>Campus Name: {campus.name}</h1>
                 <h1>Campus Address: {campus.address}</h1>
