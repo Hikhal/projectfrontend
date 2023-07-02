@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 const SingleStudentInfo = () => {
     const {id} = useParams()
