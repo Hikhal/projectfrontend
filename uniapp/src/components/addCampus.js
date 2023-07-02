@@ -35,18 +35,36 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        //name.trim() will return a falsey value if the the name is only whitespace or empty
+        name.trim() //will return a falsey value if the the name is only whitespace or empty
         if (!name.trim()) {
             alert('Name is required');
             return;
         }
 
-        const nameRegex = /^[A-Za-z0-9]+$/;
+        // Only aplha numerical and spaces are allowed
+        const nameRegex = /^[A-Za-z0-9\s]+$/;
         if (!nameRegex.test(name)) {
             alert('Name should contain only alphabets');
             return;
         }
 
+        //Image is Required
+        if (!img){
+            alert("Image is Required")
+            return;
+        }
+
+        //Adress should not be null
+        if (!address){
+            alert("Address Required")
+            return;
+        }
+
+        //Descitption should not be null
+        if (!description){
+            alert("Description Required")
+            return;
+        }
 
 
 
@@ -69,6 +87,7 @@ const AddCampus = () => {
 
         try {
             const post = await axios.post('http://localhost:8080/api/campuses', campus)
+            alert(`Campus "${name}" Added`);
         } catch (error) {
             console.log(error)
         }

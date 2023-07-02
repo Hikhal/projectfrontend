@@ -42,6 +42,24 @@ const AddStudent = () => {
      const HandleSubmit = async (event) => {
         // This prevents the default form submission behavior
         event.preventDefault();
+        //name.trim() will return a falsey value if the the name is only whitespace or empty
+        if (!name.trim()) {
+            alert('Name is required');
+            return;
+        }
+
+        // Only aplha numerical and spaces are allowed
+        const nameRegex = /^[A-Za-z0-9\s]+$/;
+        if (!nameRegex.test(name)) {
+            alert('Name should contain only alphabets');
+            return;
+        }
+
+        //Image is Required
+        if (!img){
+            alert("Image is Required")
+            return;
+        }
     
         // Creating a newStudent object from the current input field values
         const newStudent = {
