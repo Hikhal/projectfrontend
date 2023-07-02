@@ -9,7 +9,7 @@ import axios from 'axios'
  * After submitting, it clears the input fields.
  */
 
-const AddStudent = ({campusId}) => {
+const AddStudent = () => {
     const [firstName, setfirstname] = useState("")
     const [lastName, setlastname] = useState("")
     const [address, setaddress] = useState("")
@@ -85,26 +85,17 @@ const AddStudent = ({campusId}) => {
         // Update the newstudent state variable, in case it needs to be used elsewhere
         setnewstudent(newstudent);
         
-
+        // once data is submitted, clear all input fields.
+        setfirstname("")
+        setlastname("")
+        setaddress("")
+        setimage("")
+        setemail("")
+        setgpa("")
 
         // Posting the newStudent object to the server which then would handle the database submission
         try {
-            // if statements to check whether or not a student is being added to the database in general or to a specific campus
-            if(campusId) {
-                const sub = await axios.post(`http://localhost:8080/api/campuses/${campusId}`, newStudent)
-                console.log("student added to campus: ", sub.data)
-            }
-            else{
-                const submission = await axios.post('http://localhost:8080/api/students', newStudent)
-            }
-
-            // once data is submitted, clear all input fields.
-            setfirstname("")
-            setlastname("")
-            setaddress("")
-            setimage("")
-            setemail("")
-            setgpa("")
+            const submission = await axios.post('http://localhost:8080/api/students', newStudent);
         } catch (error) {
             console.log(error);
         }

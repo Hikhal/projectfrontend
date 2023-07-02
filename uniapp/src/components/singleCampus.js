@@ -46,8 +46,6 @@ const SingleCampusInfo = () => {
     return (
         students.length > 0 && (
             <div>
-                <AddStudent campusID ={id}></AddStudent> {/* Passing the campusId as a prop to addStudent which will allow us to add a student to a particular campus */}
-                <br></br>
                 <img src={campus.img} alt="Campus" />
                 <h1>Campus Name: {campus.name}</h1>
                 <h1>Campus Address: {campus.address}</h1>
