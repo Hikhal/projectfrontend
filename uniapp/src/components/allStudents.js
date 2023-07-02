@@ -7,6 +7,10 @@ const AllStudents = () => {
     const listOfStudents = useSelector(state => state.getStudents )
     console.log(listOfStudents)
     return (
+      <div>
+        <header className='student-header'>
+          <h1>All Students</h1>
+        </header>
       <div className="card-container">
         {listOfStudents.map((item) => (
           <div key={item.id} className="student-card">
@@ -20,22 +24,11 @@ const AllStudents = () => {
                 <span className="info-label">Last Name:</span>
                 <span className="info-value">{item.lastName}</span>
               </div>
-              <div className="info-item">
-                <span className="info-label">Address:</span>
-                <span className="info-value">{item.address}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Email:</span>
-                <span className="info-value">{item.email}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">GPA:</span>
-                <span className="info-value">{item.gpa}</span>
-              </div>
             </span>
           </div>
         ))}
         <Link to="/addstudent" className='addstudent-link'>Add Student</Link>
+      </div>
       </div>
     );
     
