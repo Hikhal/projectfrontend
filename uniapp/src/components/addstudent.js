@@ -9,7 +9,8 @@ import axios from 'axios'
  * After submitting, it clears the input fields.
  */
 
-const AddStudent = () => {
+// -- passing in a campusID prop so that when needed the student is assigned to a campus as well.
+const AddStudent = ({campusid}) => {
     const [firstName, setfirstname] = useState("")
     const [lastName, setlastname] = useState("")
     const [address, setaddress] = useState("")
@@ -94,8 +95,12 @@ const AddStudent = () => {
         setgpa("")
 
         // Posting the newStudent object to the server which then would handle the database submission
+        // the url for the api call is based on whether a campusid is provided or not
+
+        const url = campusid ? `http://localhost:8080/api/campus/${campusid}`:'http://localhost:8080/api/students'
+
         try {
-            const submission = await axios.post('http://localhost:8080/api/students', newStudent);
+            const submission = await axios.post(url, newStudent);
             alert(`Entry for "${firstName} ${lastName}" submitted`)
         } catch (error) {
             console.log(error);

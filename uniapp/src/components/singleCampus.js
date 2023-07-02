@@ -46,6 +46,7 @@ const SingleCampusInfo = () => {
     return (
         students.length > 0 && (
             <div>
+                <AddStudent campusid = {id}></AddStudent>
                 <img src={campus.img} alt="Campus" />
                 <h1>Campus Name: {campus.name}</h1>
                 <h1>Campus Address: {campus.address}</h1>
