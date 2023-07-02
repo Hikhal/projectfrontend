@@ -3,6 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import {addStudentThunk} from '../reduxActions/addStudent'
 import axios from 'axios'
 import { addStudent, fetchAllStudents, fetchAllStudentsThunk } from '../reduxActions/fetchStudents';
+import { addStudentThunk } from '../reduxActions/addStudent'
 
 /**
  * The component contains an input field for each attribute of a student (first name, last name, address, image, email, and GPA). 
@@ -66,11 +67,12 @@ const AddStudent = ({campusid}) => {
             return;
         }
 
-        const emailRegEx= /^[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+$/
-        if (!emailRegEx.test(email)){
-            alert("Please Enter a Valid Email Address")
-            return;
+        const emailRegEx = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (!emailRegEx.test(email)) {
+          alert("Please enter a valid email address");
+          return;
         }
+        
         
         //validating gpa
         if (gpa>4||gpa<0){
@@ -86,6 +88,9 @@ const AddStudent = ({campusid}) => {
             email,
             gpa
         }
+
+        //
+       
         
         // Update the newstudent state variable, in case it needs to be used elsewhere
         setnewstudent(newstudent);
