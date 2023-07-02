@@ -73,7 +73,7 @@ const SingleCampusInfo = () => {
                         ) : (
                             campusStudents.map((item) => (
                                 <div key={item.id}>
-                                    <p><strong>Name:</strong> {item.firstName}  {item.lastName}</p>
+                                    <p><Link to={`/singleStudent/${item.id}`}> Name: {item.firstName}  {item.lastName} </Link></p>
                                 </div>
                             ))
                         )}
