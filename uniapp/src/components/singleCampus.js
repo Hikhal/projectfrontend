@@ -57,9 +57,9 @@ const SingleCampusInfo = () => {
                         {campusStudents.length === 0 ? (
                             <p>Campus does not contain students yet</p>
                         ) : (
-                            students.map((item) => (
+                            campusStudents.map((item) => (
                                 <div key={item.id}>
-                                    <h3><strong>First Name:</strong> {item.firstName}, <strong>Last Name:</strong> {item.lastName}</h3>
+                                    <p><strong>Name:</strong> {item.firstName}  {item.lastName}</p>
                                 </div>
                             ))
                         )}
