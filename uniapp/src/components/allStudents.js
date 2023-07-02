@@ -10,6 +10,7 @@ const AllStudents = () => {
       <div className="card-container">
         {listOfStudents.map((item) => (
           <div key={item.id} className="student-card">
+            <Link to={`/singleStudent/${item.id}`} >View Details</Link>
             <img src={item.image} alt="Student" className="student-image" />
             <span className="student-info">
               <div className="info-item">
