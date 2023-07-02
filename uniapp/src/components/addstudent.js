@@ -60,6 +60,12 @@ const AddStudent = () => {
             alert("Image is Required")
             return;
         }
+
+        const emailRegEx= /^[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+$/
+        if (!emailRegEx.test(email)){
+            alert("Please Enter a Valid Email Address");
+            return;
+        }
     
         // Creating a newStudent object from the current input field values
         const newStudent = {
