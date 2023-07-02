@@ -63,10 +63,15 @@ const AddStudent = () => {
 
         const emailRegEx= /^[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+$/
         if (!emailRegEx.test(email)){
-            alert("Please Enter a Valid Email Address");
+            alert("Please Enter a Valid Email Address")
             return;
         }
-    
+        
+        //validating gpa
+        if (gpa>4||gpa<0){
+            alert("Enter a GPA on a scale of 4")
+            return;
+        }
         // Creating a newStudent object from the current input field values
         const newStudent = {
             firstName,
