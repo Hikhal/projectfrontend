@@ -1,23 +1,16 @@
-import React, {useEffect} from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector} from 'react-redux'
 import { fetchAllStudentsThunk } from '../reduxActions/fetchStudents'
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 const AllStudents = () => {
-    const dispatch = useDispatch()
+  
     const listOfStudents = useSelector(state => state.getStudents )
     console.log(listOfStudents)
-
-    useEffect(()=>{
-      dispatch(fetchAllStudentsThunk())
-      return () => {
-        dispatch({type: "CLEAR_ALL_STATES"})
-      }
-    }, [dispatch])
-
     return (
       <div className="card-container">
         {listOfStudents.map((item) => (
           <div key={item.id} className="student-card">
+            <Link to={`/singleStudent/${item.id}`} >View Details</Link>
             <img src={item.image} alt="Student" className="student-image" />
             <span className="student-info">
               <div className="info-item">
