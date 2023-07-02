@@ -1,10 +1,16 @@
 import React from 'react'
-import { useSelector} from 'react-redux'
-import { fetchAllStudentsThunk } from '../reduxActions/fetchStudents'
+import { useDispatch, useSelector} from 'react-redux'
+import {removeStudentThunk } from '../reduxActions/fetchStudents'
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 const AllStudents = () => {
-  
+    const dispatch=useDispatch();
     const listOfStudents = useSelector(state => state.getStudents )
+
+
+    const deleteStudent = (id) => {
+      dispatch(removeStudentThunk(id));
+    };
+
     console.log(listOfStudents)
     return (
       <div>
@@ -25,6 +31,7 @@ const AllStudents = () => {
                   <h3 className="info-label">Last Name:{item.lastName}</h3>
                   <br/>
                   <Link className='viewDetails-link' to={`/singleStudent/${item.id}`} >View Details</Link>
+                  <button onClick={() => deleteStudent(item.id)}>x</button>
                 </div>
               </span>
             </div>
