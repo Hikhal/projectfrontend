@@ -16,6 +16,11 @@ const SingleCampusInfo = () => {
     // the api call to the server would be made in order to display the info of the campus.
 
     const [campus, setCampus] = useState("")
+    const [showAddStudent, setShowAddStudent] = useState(false);
+
+    const handleClick = () => {
+      setShowAddStudent(true);
+    };
 
     useEffect(()=>{
         async function getCamp(){
@@ -46,7 +51,8 @@ const SingleCampusInfo = () => {
     return (
         students.length > 0 && (
             <div>
-                <AddStudent campusid = {id}></AddStudent>
+               <button onClick={handleClick}> Add Student </button>
+                {showAddStudent && <AddStudent campusid={id} />} 
                 <img src={campus.img} alt="Campus" />
                 <h1>Campus Name: {campus.name}</h1>
                 <h1>Campus Address: {campus.address}</h1>

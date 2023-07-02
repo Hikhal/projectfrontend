@@ -97,7 +97,7 @@ const AddStudent = ({campusid}) => {
         // Posting the newStudent object to the server which then would handle the database submission
         // the url for the api call is based on whether a campusid is provided or not
 
-        const url = campusid ? `http://localhost:8080/api/campus/${campusid}`:'http://localhost:8080/api/students'
+        const url = campusid ? `http://localhost:8080/api/campuses/${campusid}`:'http://localhost:8080/api/students'
 
         try {
             const submission = await axios.post(url, newStudent);
