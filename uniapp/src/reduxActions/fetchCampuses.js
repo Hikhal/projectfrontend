@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import { removeCampus } from './removeCamp'
 // creating action
  const actiontype = 'FETCHCAMPUSES'
 
@@ -25,6 +25,17 @@ export const fetchAllCampusesThunk = () => {
             dispatch(fetchAllCampuses(datalist.data))
         } catch (error) {
             console.log(error)
+        }
+    }
+}
+
+export const removeCampusThunk=(id)=>{
+    return async (dispatch)=>{
+        try{
+            const deletethis=await axios.delete(`http://localhost:8080/api/campuses/delete/${id}`);
+            dispatch(removeCampus(id))
+        }catch (error){
+            console.log(error);
         }
     }
 }

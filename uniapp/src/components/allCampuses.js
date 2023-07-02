@@ -1,13 +1,16 @@
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchAllCampusesThunk } from '../reduxActions/fetchCampuses'
+import { fetchAllCampusesThunk,removeCampusThunk } from '../reduxActions/fetchCampuses'
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import SingleCampusInfo from './singleCampus';
 
 const AllCampuses = () => {
     const listOfCampuses = useSelector(state => state.getCampuses )
     console.log("--> campuses",listOfCampuses)
-
+    const dispatch= useDispatch();
+    const deleteCampus =(id)=>{
+      dispatch(removeCampusThunk(id));
+    };
 
     return (
       <div>
@@ -26,6 +29,7 @@ const AllCampuses = () => {
             {/* This Link is set to navigate to the path of the 'SingleCampusInfo' component. 
               The `id` of the item is inserted into the URL, replacing the `:id` placeholder in the Route path. */}
             <Link className='viewDetails-link' to={`/singleCampus/${item.id}`} >View Details</Link>
+            <button onClick={() => deleteCampus(item.id)}>x</button>
           </div>
         ))}
         </div>

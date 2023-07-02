@@ -6,9 +6,11 @@ const getAllCampusesReducer = (state = initialState, action)=>{
         case 'FETCHCAMPUSES':
             return state = [...state, ...action.payload]
         case 'CLEAR_ALL_STATES':
-            state = []
+            return []; 
+        case 'REMOVE_CAMPUS':
+            return state.filter(campus => campus.id !== action.payload);
         default:
-            return state
+            return state;
     }
 }
 
