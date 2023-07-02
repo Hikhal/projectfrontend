@@ -35,20 +35,13 @@ const SingleStudentInfo = () => {
    
     return (
         <div className='details'>
-             <img src={studentInfo.image} alt="Student"/>
-             <br></br>
+             <img src={studentInfo.image} alt=""/>
              <h3> <strong>First Name:</strong>{studentInfo.firstName}</h3>
-             <br></br>
              <h3> <strong>Last Name:  </strong>{studentInfo.lastName}</h3>
-             <br></br>
              <h3> <strong>Address: </strong>{studentInfo.address}</h3>
-             <br></br>
              <h3> <strong>Email:</strong>{studentInfo.email}</h3>
-             <br></br>
              <h3> <strong>GPA:</strong> {studentInfo.gpa}</h3>
-             <br></br>
              <h3><strong>Campus:</strong> {campusName}</h3>
-            <br></br>
         </div>
     )
 }
