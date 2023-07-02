@@ -32,7 +32,7 @@ export const fetchAllStudentsThunk = () => {
 export const removeStudentThunk=(id)=>{
     return async (dispatch)=>{
         try{
-            // const deletethis=await axios.delete("http://localhost:8080/api/students");
+            const deletethis=await axios.delete(`http://localhost:8080/api/students/delete/${id}`);
             dispatch(removeStudent(id))
         }catch (error){
             console.log(error);

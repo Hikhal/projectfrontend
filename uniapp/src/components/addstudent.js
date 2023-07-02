@@ -96,6 +96,7 @@ const AddStudent = () => {
         // Posting the newStudent object to the server which then would handle the database submission
         try {
             const submission = await axios.post('http://localhost:8080/api/students', newStudent);
+            alert(`Entry for "${firstName} ${lastName}" submitted`)
         } catch (error) {
             console.log(error);
         }
