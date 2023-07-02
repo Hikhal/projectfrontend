@@ -42,7 +42,8 @@ const SingleStudentInfo = () => {
              <h3> <strong>Address: </strong>{studentInfo.address}</h3>
              <h3> <strong>Email:</strong>{studentInfo.email}</h3>
              <h3> <strong>GPA:</strong> {studentInfo.gpa}</h3>
-             <h3><strong>Campus:</strong> {campusName}</h3>
+             <p>  <Link to = {`/singleCampus/${studentInfo.campusId}`}> <strong>Campus:</strong> {campusName}</Link> </p>
+            
         </div>
     )
 }
