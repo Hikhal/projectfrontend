@@ -47,7 +47,7 @@ const SingleStudentInfo = () => {
              <br></br>
              <p1> <strong>GPA:</strong> {studentInfo.gpa}</p1>
              <br></br>
-             <p1><strong>Campus:</strong> {cam }</p1>
+             <p1><strong>Campus:</strong> {campusName}</p1>
             <br></br>
         </div>
     )

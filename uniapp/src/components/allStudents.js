@@ -25,6 +25,7 @@ const AllStudents = () => {
                 <div className="info-item">
                   <span className="info-label">Last Name:</span>
                   <span className="info-value">{item.lastName}</span>
+                  <Link to={`/singleStudent/${item.id}`} >View Details</Link>
                 </div>
               </span>
             </div>
