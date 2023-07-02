@@ -50,7 +50,7 @@ const AddStudent = () => {
 
         // Only aplha numerical and spaces are allowed
         const nameRegex = /^[A-Za-z0-9\s]+$/;
-        if (!nameRegex.test(firstName)) {
+        if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
             alert('Name should contain only alphabets');
             return;
         }
