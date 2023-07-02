@@ -8,7 +8,7 @@ const AllStudents = () => {
     console.log(listOfStudents)
     return (
       <div>
-        <header className='student-header'>
+        <header className='header'>
           <h1>All Students</h1>
         </header>
           <Link to="/addstudent" className='addstudent-link'>Add Student</Link>
@@ -25,6 +25,8 @@ const AllStudents = () => {
                 <div className="info-item">
                   <span className="info-label">Last Name:</span>
                   <span className="info-value">{item.lastName}</span>
+
+                  <br/>
                   <Link to={`/singleStudent/${item.id}`} >View Details</Link>
                 </div>
               </span>

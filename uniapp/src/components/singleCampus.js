@@ -43,7 +43,7 @@ const SingleCampusInfo = () => {
     console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
         students.length > 0 && (
-            <div>
+            <div className='details'>
                 <img src={campus.img} alt="Campus" />
                 <h1>Campus Name: {campus.name}</h1>
                 <h1>Campus Address: {campus.address}</h1>

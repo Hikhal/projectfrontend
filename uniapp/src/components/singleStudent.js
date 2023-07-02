@@ -34,7 +34,7 @@ const SingleStudentInfo = () => {
     const campusName = studentCamp ? studentCamp.name : "Not enrolled in any campus yet.";
    
     return (
-        <div>
+        <div className='details'>
              <img src={studentInfo.image} alt="Student"/>
              <br></br>
              <p1> <strong>First Name:</strong>{studentInfo.firstName}</p1>
