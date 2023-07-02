@@ -43,20 +43,20 @@ const AddStudent = () => {
         // This prevents the default form submission behavior
         event.preventDefault();
         //name.trim() will return a falsey value if the the name is only whitespace or empty
-        if (!name.trim()) {
-            alert('Name is required');
+        if (!firstName.trim() || !lastName) {
+            alert('First Name and Last Name are required');
             return;
         }
 
         // Only aplha numerical and spaces are allowed
         const nameRegex = /^[A-Za-z0-9\s]+$/;
-        if (!nameRegex.test(name)) {
+        if (!nameRegex.test(firstName)) {
             alert('Name should contain only alphabets');
             return;
         }
 
         //Image is Required
-        if (!img){
+        if (!image){
             alert("Image is Required")
             return;
         }

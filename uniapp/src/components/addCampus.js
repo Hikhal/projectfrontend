@@ -35,7 +35,7 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        name.trim() //will return a falsey value if the the name is only whitespace or empty
+        //name.trim() //will return a falsey value if the the name is only whitespace or empty
         if (!name.trim()) {
             alert('Name is required');
             return;
