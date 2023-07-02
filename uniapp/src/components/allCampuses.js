@@ -21,7 +21,6 @@ const AllCampuses = () => {
             {/* This Link is set to navigate to the path of the 'SingleCampusInfo' component. 
               The `id` of the item is inserted into the URL, replacing the `:id` placeholder in the Route path. */}
             <img src={item.image} alt="Campus" className="campus-image" />
-            <p className="campus-description">Enrollment count: {}</p>
             <Link to={`/singleCampus/${item.id}`} >View Details</Link>
           </div>
         ))}
