@@ -55,7 +55,7 @@ body {
 }
 
 .sidebar a:hover {
-  color: pink;
+  color: #333;
 }
 
 /* Adjustments for main content */
@@ -99,10 +99,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Campus CSS */
-
-
-/* Student Card CSS */
+/* Campus card CSS & Student Card CSS */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -115,9 +112,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #ccc;
-  background-color: #ccc;
-  border-radius: 4px;
+  border: 1px solid #333;
+  background:
+        linear-gradient(#333, transparent),
+        linear-gradient(to top left, grey, transparent),
+        linear-gradient(to top right, #ccc, transparent);
+    background-blend-mode: screen;
+  overflow: hidden;
+  border-radius: 8px;
   padding: 10px;
   margin: 10px;
   width: 200px;
@@ -130,36 +132,40 @@ body {
   width: 100%;
   height: 120px;
   object-fit: cover;
-  border-radius: 4px 4px 0 0;
+  border-radius: 7px 7px 5px 5px;
 }
 
 .card-info {
   text-align: center;
 }
 
-/*add campus form */
-
-.campus-form {
+/*add campus form & add student form */
+.input-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f2f2f2;
+  background:
+        linear-gradient(#333, transparent),
+        linear-gradient(to top left, grey, transparent),
+        linear-gradient(to top right, #ccc, transparent);
+    background-blend-mode: screen;
+  overflow: hidden;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 20px;
 }
 
-.campus-form input {
-  width: 100%;
+.input-form input {
+  width: 90%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 7px;
 }
 
-.campus-form button {
-  padding: 10px 20px;
+.input-form button {
+  padding: 10px 40px;
   background-color: #333;
   color: #fff;
   border: none;
@@ -167,45 +173,22 @@ body {
   cursor: pointer;
 }
 
-.campus-form button:hover {
+.input-form button:hover {
   background-color: grey;
 }
-
-/*add student form */
-.student-form {
+/*Student submit add button & Campus submit add button*/
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  position: relative;
 }
 
-.student-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.student-form button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.student-form button:hover {
-  background-color: grey;
-}
-/*Student submit add button*/
-.addstudent-link {
-  display: inline-block;
+.add-link {
+  position: absolute;
+  top: 8%;
+  right: 50px;
+  transform: translateY(-50%);
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
@@ -214,22 +197,22 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.addstudent-link:hover {
+.add-link:hover {
   background-color: grey;
 }
 
-/* Campus submit add button*/
-.addcampus-link {
+
+.viewDetails-link {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 3.5px 20px;
   background-color: #333;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-.addcampus-link:hover {
+.viewDetails-link:hover {
   background-color: grey;
 }
 

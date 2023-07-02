@@ -14,7 +14,7 @@ const AllCampuses = () => {
         <header className='header'>
         <h1>All Campuses</h1>
         </header>
-        <Link to="/addCampus" className='addcampus-link'>Add Campus</Link>
+        <Link to="/addCampus" className='add-link'>Add Campus</Link>
 
         <div className="card-container">
         {listOfCampuses.map((item) => (
@@ -25,7 +25,7 @@ const AllCampuses = () => {
             </div>
             {/* This Link is set to navigate to the path of the 'SingleCampusInfo' component. 
               The `id` of the item is inserted into the URL, replacing the `:id` placeholder in the Route path. */}
-            <Link to={`/singleCampus/${item.id}`} >View Details</Link>
+            <Link className='viewDetails-link' to={`/singleCampus/${item.id}`} >View Details</Link>
           </div>
         ))}
         </div>

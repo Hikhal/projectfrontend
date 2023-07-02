@@ -11,7 +11,7 @@ const AllStudents = () => {
         <header className='header'>
           <h1>All Students</h1>
         </header>
-          <Link to="/addstudent" className='addstudent-link'>Add Student</Link>
+          <Link to="/addstudent" className='add-link'>Add Student</Link>
           
         <div className="card-container">
           {listOfStudents.map((item) => (
@@ -24,7 +24,7 @@ const AllStudents = () => {
                 <div className="info-item">
                   <h3 className="info-label">Last Name:{item.lastName}</h3>
                   <br/>
-                  <Link to={`/singleStudent/${item.id}`} >View Details</Link>
+                  <Link className='viewDetails-link' to={`/singleStudent/${item.id}`} >View Details</Link>
                 </div>
               </span>
             </div>

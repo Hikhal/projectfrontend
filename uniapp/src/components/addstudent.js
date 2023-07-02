@@ -74,7 +74,7 @@ const AddStudent = () => {
 
     return(
         <div>
-            <form onSubmit={HandleSubmit} className='student-form'>
+            <form onSubmit={HandleSubmit} className='input-form'>
                 <h2>Enter Your Information below</h2>
                 <input type='text' placeholder='Student First Name' value={firstName} onChange={setFirstName}></input>
                 <input type='text' placeholder='Student Last Name' value={lastName} onChange={setLastName}></input>
