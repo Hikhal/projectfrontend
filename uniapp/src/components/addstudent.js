@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react'
+import { useDispatch, useSelector} from 'react-redux';
+import {addStudentThunk} from '../reduxActions/addStudent'
 import axios from 'axios'
+import { addStudent, fetchAllStudents, fetchAllStudentsThunk } from '../reduxActions/fetchStudents';
 
 /**
  * The component contains an input field for each attribute of a student (first name, last name, address, image, email, and GPA). 
@@ -11,6 +14,7 @@ import axios from 'axios'
 
 // -- passing in a campusID prop so that when needed the student is assigned to a campus as well.
 const AddStudent = ({campusid}) => {
+    const dispatch=useDispatch();
     const [firstName, setfirstname] = useState("")
     const [lastName, setlastname] = useState("")
     const [address, setaddress] = useState("")
@@ -99,12 +103,8 @@ const AddStudent = ({campusid}) => {
 
         const url = campusid ? `http://localhost:8080/api/campuses/${campusid}`:'http://localhost:8080/api/students'
 
-        try {
-            const submission = await axios.post(url, newStudent);
-            alert(`Entry for "${firstName} ${lastName}" submitted`)
-        } catch (error) {
-            console.log(error);
-        }
+        dispatch(addStudentThunk(url,newStudent))
+        // dispatch(fetchAllStudents(newStudent));
     }
 
     return(

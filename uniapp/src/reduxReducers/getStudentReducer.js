@@ -8,6 +8,8 @@ const getAllStudentsReducer = (state = initialState, action) => {
       return [];
     case 'REMOVE_STUDENT':
       return state.filter(student => student.id !== action.payload);
+      case 'ADD_STUDENT':
+        return [...state,action.payload]
     default:
       return state;
   }

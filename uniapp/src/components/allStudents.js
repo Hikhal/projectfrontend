@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector} from 'react-redux'
-import {removeStudentThunk } from '../reduxActions/fetchStudents'
+import {fetchAllStudents, removeStudentThunk } from '../reduxActions/fetchStudents'
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 const AllStudents = () => {
     const dispatch=useDispatch();

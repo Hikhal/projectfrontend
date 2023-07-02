@@ -4,10 +4,10 @@ const ADD_STUDENT = 'ADD_STUDENT'
 
 
 // action creator
-export const add_student = (payload) =>{
+export const add_student = (student) =>{
     return {
-        type: ADD_STUDENT,
-        payload: payload
+        type: "ADD_STUDENT",
+        "payload": student
     }
 
 }
@@ -18,8 +18,7 @@ export const addStudentThunk = (url, student) => {
             const response = await axios.post(url, student);
             const newStudent = response.data;
             alert(`Entry for "${newStudent.firstName} ${newStudent.lastName}" submitted`);
-            dispatch(add_student(newStudent))
-            dispatch(fetchAllStudents()); 
+            dispatch(add_student(student));
         } catch (error) {
             console.log(error)
             
