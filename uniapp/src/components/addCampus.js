@@ -11,7 +11,7 @@ import axios from 'axios'
 
 const AddCampus = () => {
     const [name, setname] = useState("")
-    const [image, setimage] = useState("")
+    const [img, setimage] = useState("")
     const [address, setaddress] = useState("")
     const [description, setdescription] = useState("")
     const [newcampus, setnewcampus] = useState(undefined)
@@ -38,7 +38,7 @@ const AddCampus = () => {
         // Create campus Object
         const campus = {
             name,
-            image,
+            img,
             address,
             description
         }
@@ -53,21 +53,24 @@ const AddCampus = () => {
 
 
         try {
-            await axios.post('http://localhost:8080/api/campuses', newcampus)
+            const post = await axios.post('http://localhost:8080/api/campuses', campus)
         } catch (error) {
             console.log(error)
         }
     }
 
+    // Bug found on line 65, onSumbit was missing.
     return(
         <div>
-            <form>
+            <form className='campus-form' onSubmit={handleSubmit}> 
+                <h2>Enter New Campus Information</h2>
                 <input type='text' placeholder='Campus Name' value={name} onChange={setName}></input>
-                <input type='text' placeholder='Campus Image' value={image} onChange={setImg}></input>
+                <input type='text' placeholder='Campus Image' value={img} onChange={setImg}></input>
                 <input type='text' placeholder='Campus Address' value={address} onChange={setAddress}></input>
                 <input type='text' placeholder='Campus Description' value={description} onChange={setDescription}></input>
                 <button type="submit">Submit</button>
             </form>
+            
         </div>
     )
 }
