@@ -11,7 +11,7 @@ const AllCampuses = () => {
 
     return (
       <div>
-        <header>
+        <header className='campus-header'>
         <h1>All Campuses</h1>
         </header>
         <Link to="/addCampus" className='addcampus-link'>Add Campus</Link>
