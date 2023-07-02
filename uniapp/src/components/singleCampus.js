@@ -45,19 +45,19 @@ const SingleCampusInfo = () => {
         students.length > 0 && (
             <div className='details'>
                 <img src={campus.img} alt="Campus" />
-                <h1>Campus Name: {campus.name}</h1>
-                <h1>Campus Address: {campus.address}</h1>
-                <h1>Campus Description: {campus.description}</h1>
+                <h2>Campus Name: {campus.name}</h2>
+                <h2>Campus Address: {campus.address}</h2>
+                <h2>Campus Description: {campus.description}</h2>
     
                 <div>
-                    <h1>Students: </h1>
+                    <h2>Students: </h2>
                     <div>
                         {campusStudents.length === 0 ? (
                             <p>Campus does not contain students yet</p>
                         ) : (
                             students.map((item) => (
                                 <div key={item.id}>
-                                    <p><strong>First Name:</strong> {item.firstName} <strong>Last Name:</strong> {item.lastName}</p>
+                                    <h2><strong>First Name:</strong> {item.firstName}, <strong>Last Name:</strong> {item.lastName}</h2>
                                 </div>
                             ))
                         )}

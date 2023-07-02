@@ -128,7 +128,6 @@ body {
 
 .cards-image {
   background-color: #f2f2f2;
-  
   width: 100%;
   height: 120px;
   object-fit: cover;
@@ -176,8 +175,9 @@ body {
 .input-form button:hover {
   background-color: grey;
 }
-/*Student submit add button & Campus submit add button*/
+/*header, Student submit add button & Campus submit add button*/
 .header {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,6 +201,7 @@ body {
   background-color: grey;
 }
 
+/* view Detail button */
 
 .viewDetails-link {
   display: inline-block;
@@ -216,3 +217,33 @@ body {
   background-color: grey;
 }
 
+/* View detail section */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.details img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border-color: black;
+  background-color: #ccc;
+}
+
+.details h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-decoration: underline #333 ;
+}
+
+.details h3 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-decoration: underline #333;
+}

@@ -37,17 +37,17 @@ const SingleStudentInfo = () => {
         <div className='details'>
              <img src={studentInfo.image} alt="Student"/>
              <br></br>
-             <p1> <strong>First Name:</strong>{studentInfo.firstName}</p1>
+             <h3> <strong>First Name:</strong>{studentInfo.firstName}</h3>
              <br></br>
-             <p1> <strong>Last Name:  </strong>{studentInfo.lastName}</p1>
+             <h3> <strong>Last Name:  </strong>{studentInfo.lastName}</h3>
              <br></br>
-             <p1> <strong>Address: </strong>{studentInfo.address}</p1>
+             <h3> <strong>Address: </strong>{studentInfo.address}</h3>
              <br></br>
-             <p1> <strong>Email:</strong>{studentInfo.email}</p1>
+             <h3> <strong>Email:</strong>{studentInfo.email}</h3>
              <br></br>
-             <p1> <strong>GPA:</strong> {studentInfo.gpa}</p1>
+             <h3> <strong>GPA:</strong> {studentInfo.gpa}</h3>
              <br></br>
-             <p1><strong>Campus:</strong> {campusName}</p1>
+             <h3><strong>Campus:</strong> {campusName}</h3>
             <br></br>
         </div>
     )
