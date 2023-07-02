@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 // This is a functional component for displaying individual campus information
 const SingleCampusInfo = () => {
@@ -43,11 +44,13 @@ const SingleCampusInfo = () => {
     console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
         students.length > 0 && (
-            <div className='details'>
-                <img src={campus.img} alt="" />
-                <h2>Campus Name: {campus.name}</h2>
-                <h2>Campus Address: {campus.address}</h2>
-                <h2>Campus Description: {campus.description}</h2>
+            <div>
+                <Link to="/addstudent" className='addcampus-link'>Add Student</Link>
+                <br></br>
+                <img src={campus.img} alt="Campus" />
+                <h1>Campus Name: {campus.name}</h1>
+                <h1>Campus Address: {campus.address}</h1>
+                <h1>Campus Description: {campus.description}</h1>
     
                 <div>
                     <h2>Students: </h2>
