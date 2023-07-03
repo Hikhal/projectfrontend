@@ -48,37 +48,37 @@ const AddStudent = ({campusid}) => {
      const HandleSubmit = async (event) => {
         // This prevents the default form submission behavior
         event.preventDefault();
-        //name.trim() will return a falsey value if the the name is only whitespace or empty
-        if (!firstName.trim() || !lastName) {
-            alert('First Name and Last Name are required');
-            return;
-        }
+        // //name.trim() will return a falsey value if the the name is only whitespace or empty
+        // if (!firstName.trim() || !lastName) {
+        //     alert('First Name and Last Name are required');
+        //     return;
+        // }
 
-        // Only aplha numerical and spaces are allowed
-        const nameRegex = /^[A-Za-z0-9\s]+$/;
-        if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
-            alert('Name should contain only alphabets');
-            return;
-        }
+        // // Only aplha numerical and spaces are allowed
+        // const nameRegex = /^[A-Za-z0-9\s]+$/;
+        // if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+        //     alert('Name should contain only alphabets');
+        //     return;
+        // }
 
-        //Image is Required
-        if (!image){
-            alert("Image is Required")
-            return;
-        }
+        // //Image is Required
+        // if (!image){
+        //     alert("Image is Required")
+        //     return;
+        // }
 
-        const emailRegEx = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-        if (!emailRegEx.test(email)) {
-          alert("Please enter a valid email address");
-          return;
-        }
+        // const emailRegEx = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        // if (!emailRegEx.test(email)) {
+        //   alert("Please enter a valid email address");
+        //   return;
+        // }
         
         
-        //validating gpa
-        if (gpa>4||gpa<0){
-            alert("Enter a GPA on a scale of 4")
-            return;
-        }
+        // //validating gpa
+        // if (gpa>4||gpa<0){
+        //     alert("Enter a GPA on a scale of 4")
+        //     return;
+        // }
         // Creating a newStudent object from the current input field values
         const newStudent = {
             firstName,
