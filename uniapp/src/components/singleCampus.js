@@ -55,7 +55,6 @@ const SingleCampusInfo = () => {
     return (
         students.length > 0 && (
             <div className='details-campus'>
-               <button onClick={handleClick}> Add Student </button>
                {/* If showAddStudent is true, the <AddStudent> component is rendered.
                  If showAddStudent is false, the <AddStudent> component is not rendered.*/}
                 {showAddStudent && <AddStudent campusid={id} />} 
@@ -79,6 +78,8 @@ const SingleCampusInfo = () => {
                         )}
                     </div>
                 </div>
+                <button className='add-stu' onClick={handleClick}> Add Student </button>
+
             </div>
         )
     );

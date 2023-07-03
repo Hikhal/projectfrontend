@@ -227,7 +227,7 @@ body {
   background-color: grey;
 }
 
-/* View detail section */
+/* View detail section of Student */
 
 .details {
   display: flex;
@@ -305,6 +305,23 @@ body {
 .details-campus h2{
   font-size: 1rem; /* Adjust the font size as needed */
   margin-bottom: 5px;
+}
+/* Add student form Campus View details */
+.add-stu {
+  display: inline-block;
+  padding: 3.5px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 23px;
+  /* margin-bottom: 10px; */
+  margin-top: 4px;
+}
+
+.add-stu:hover {
+  background-color: grey;
 }
 
 /* Remove Campus */
