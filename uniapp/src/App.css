@@ -267,6 +267,27 @@ body {
   margin-bottom: 5px;
 }
 
+/* from Student view details to campus details button */
+
+.tocampus-details {
+  display: inline-block;
+  padding: 3.5px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 0px;
+  margin-top: 4px;
+}
+
+.tocampus-details:hover {
+  background-color: grey;
+}
+
+
+
+
 /* Campus view details */
 
 .details-campus {
@@ -284,12 +305,12 @@ body {
   border-radius: 4px;
   margin-bottom: 20px;
   width: 20rem; /* Adjust the width as needed */
-  height: 20rem; /* Adjust the height as needed */
+  height: 25rem; /* Adjust the height as needed */
 }
 
 .details-campus img {
-  width: 6rem; /* Adjust the width as needed */
-  height: 6rem; /* Adjust the height as needed */
+  width: 10rem; /* Adjust the width as needed */
+  height: 10rem; /* Adjust the height as needed */
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 10px;
@@ -316,7 +337,6 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   margin-left: 0px;
-  /* margin-bottom: 10px; */
   margin-top: 4px;
 }
 

@@ -37,12 +37,13 @@ const SingleStudentInfo = () => {
     return (
         <div className='details'>
              <img src={studentInfo.image} alt=""/>
-             <h3> <strong>First Name:</strong>{studentInfo.firstName}</h3>
-             <h3> <strong>Last Name:  </strong>{studentInfo.lastName}</h3>
-             <h3> <strong>Address: </strong>{studentInfo.address}</h3>
-             <h3> <strong>Email:</strong>{studentInfo.email}</h3>
-             <h3> <strong>GPA:</strong> {studentInfo.gpa}</h3>
-             <p>  <Link to = {`/singleCampus/${studentInfo.campusId}`}> <strong>Campus:</strong> {campusName}</Link> </p>
+             <h3 > <strong>First Name:</strong>{studentInfo.firstName}</h3>
+             <h3 > <strong>Last Name:  </strong>{studentInfo.lastName}</h3>
+             <h3 > <strong>Address: </strong>{studentInfo.address}</h3>
+             <h3 > <strong>Email:</strong>{studentInfo.email}</h3>
+             <h3 > <strong>GPA:</strong> {studentInfo.gpa}</h3>
+             <h3 ><strong>Campus: </strong>{campusName}</h3>
+             <p>  <Link className='tocampus-details' to = {`/singleCampus/${studentInfo.campusId}`} > {campusName} <strong>Details</strong></Link> </p>
             
         </div>
     )
