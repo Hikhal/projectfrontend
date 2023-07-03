@@ -22,7 +22,7 @@ const AllCampuses = () => {
         <div className="card-container">
         {listOfCampuses.map((item) => (
           <div key={item.name} className="cards">
-            <img src={item.image} alt="Campus" className="cards-image" />
+            <img src={item.img} alt="Campus" className="cards-image" />
             <div className="info-item">
             <h2>{item.name}</h2>
             </div>
