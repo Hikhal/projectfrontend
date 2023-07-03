@@ -260,11 +260,83 @@ body {
 .details h2 {
   font-size: 1rem; /* Adjust the font size as needed */
   margin-bottom: 5px;
-  text-decoration: underline;
 }
 
 .details h3 {
   font-size: 1rem; /* Adjust the font size as needed */
   margin-bottom: 5px;
-  text-decoration: underline;
+}
+
+/* Campus view details */
+
+.details-campus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background:
+    linear-gradient(#333, transparent),
+    linear-gradient(to top left, grey, transparent),
+    linear-gradient(to top right, #ccc, transparent);
+  background-blend-mode: screen;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 20rem; /* Adjust the width as needed */
+  height: 20rem; /* Adjust the height as needed */
+}
+
+.details-campus img {
+  width: 6rem; /* Adjust the width as needed */
+  height: 6rem; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border-color: black;
+  background-color: #ccc;
+}
+
+.details-campus h1 {
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin-bottom: 5px;
+}
+
+.details-campus h2{
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin-bottom: 5px;
+}
+
+/* Remove Campus */
+
+.remove {
+  display: inline-block;
+  padding: 3.5px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.remove:hover {
+  background-color: grey;
+}
+
+/* Remove Student */
+.remove-Student {
+  display: inline-block;
+  padding: 3.5px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 23px;
+  /* margin-bottom: 10px; */
+  margin-top: 4px;
+}
+
+.remove-Student:hover {
+  background-color: grey;
 }

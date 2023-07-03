@@ -31,7 +31,9 @@ const AllStudents = () => {
                   <h3 className="info-label">Last Name:{item.lastName}</h3>
                   <br/>
                   <Link className='viewDetails-link' to={`/singleStudent/${item.id}`} >View Details</Link>
-                  <button onClick={() => deleteStudent(item.id)}>x</button>
+                  <p/>
+                  {/* Remove Student */}
+                  <button className='remove-Student' onClick={() => deleteStudent(item.id)}>Delete</button>
                 </div>
               </span>
             </div>

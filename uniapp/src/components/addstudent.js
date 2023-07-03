@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import {addStudentThunk} from '../reduxActions/addStudent'
 import axios from 'axios'
 import { addStudent, fetchAllStudents, fetchAllStudentsThunk } from '../reduxActions/fetchStudents';
-import { addStudentThunk } from '../reduxActions/addStudent'
+//import { addStudentThunk } from '../reduxActions/addStudent'
 
 /**
  * The component contains an input field for each attribute of a student (first name, last name, address, image, email, and GPA). 

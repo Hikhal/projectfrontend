@@ -29,7 +29,9 @@ const AllCampuses = () => {
             {/* This Link is set to navigate to the path of the 'SingleCampusInfo' component. 
               The `id` of the item is inserted into the URL, replacing the `:id` placeholder in the Route path. */}
             <Link className='viewDetails-link' to={`/singleCampus/${item.id}`} >View Details</Link>
-            <button onClick={() => deleteCampus(item.id)}>x</button>
+            <p/>
+            {/* Remove Campus */}
+            <button className='remove' onClick={() => deleteCampus(item.id)}>Delete</button>
           </div>
         ))}
         </div>

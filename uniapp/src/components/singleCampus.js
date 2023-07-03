@@ -54,13 +54,13 @@ const SingleCampusInfo = () => {
     console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
         students.length > 0 && (
-            <div>
+            <div className='details-campus'>
                <button onClick={handleClick}> Add Student </button>
                {/* If showAddStudent is true, the <AddStudent> component is rendered.
                  If showAddStudent is false, the <AddStudent> component is not rendered.*/}
                 {showAddStudent && <AddStudent campusid={id} />} 
                 <br></br>
-                <img src={campus.img} alt="Campus" />
+                <img src={campus.img} alt="" />
                 <h1>Campus Name: {campus.name}</h1>
                 <h1>Campus Address: {campus.address}</h1>
                 <h1>Campus Description: {campus.description}</h1>
