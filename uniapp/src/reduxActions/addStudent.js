@@ -18,6 +18,7 @@ export const addStudentThunk = (url, student) => {
             const response = await axios.post(url, student);
             const newStudent = response.data;
             alert(`Entry for "${newStudent.firstName} ${newStudent.lastName}" submitted`);
+            student={...student,id:newStudent.id}
             dispatch(add_student(student));
         } catch (error) {
             console.log(error)
