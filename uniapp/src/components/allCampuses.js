@@ -24,7 +24,7 @@ const AllCampuses = () => {
           <div key={item.name} className="cards">
             <img src={item.image} alt="Campus" className="cards-image" />
             <div className="info-item">
-            <h2>{item.id}</h2>
+            <h2>{item.name}</h2>
             </div>
             {/* This Link is set to navigate to the path of the 'SingleCampusInfo' component. 
               The `id` of the item is inserted into the URL, replacing the `:id` placeholder in the Route path. */}
