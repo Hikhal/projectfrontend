@@ -8,9 +8,15 @@ const AllCampuses = () => {
     const listOfCampuses = useSelector(state => state.getCampuses )
     console.log("--> campuses",listOfCampuses)
     const dispatch= useDispatch();
+
+    useEffect(() => {
+      dispatch(fetchAllCampusesThunk());
+      
+    }, [dispatch]);
     const deleteCampus =(id)=>{
       dispatch(removeCampusThunk(id));
     };
+
 
     return (
       <div>

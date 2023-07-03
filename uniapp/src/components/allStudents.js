@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useDispatch, useSelector} from 'react-redux'
-import {fetchAllStudents, removeStudentThunk } from '../reduxActions/fetchStudents'
+import {fetchAllStudentsThunk, removeStudentThunk} from '../reduxActions/fetchStudents'
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 const AllStudents = () => {
     const dispatch=useDispatch();
@@ -11,6 +11,12 @@ const AllStudents = () => {
       dispatch(removeStudentThunk(id));
     };
 
+    useEffect(() => {
+      dispatch(fetchAllStudentsThunk());
+      
+    }, [dispatch]);
+
+    
     console.log(listOfStudents)
     return (
       <div>

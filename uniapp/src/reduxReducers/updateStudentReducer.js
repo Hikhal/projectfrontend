@@ -2,7 +2,7 @@ const initialState = []
 const updateStudentReducer = (state = initialState, action) => {
     switch(action.type){
         case 'UPDATE_STUDENT':
-            const updatedStudent = action.paylaod // this will hold updated students info
+            const updatedStudent = action.payload // this will hold updated students info
            
              // find the pos of the student inside of the state array
 

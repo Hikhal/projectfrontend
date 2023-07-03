@@ -1,18 +1,32 @@
-import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
+import React, {useState, useEffect} from 'react'
+import { useDispatch , useSelector} from 'react-redux'
 import { updateStudentThunk } from '../reduxActions/updateStudent'
+import { fetchAllStudents } from '../reduxActions/fetchStudents'
 
 const UpdateStudent = ({prevStudentInfo}) => {
+    const listStudents = useSelector(state => state.getStudents)
+    console.log(prevStudentInfo)
     const dispatch = useDispatch()
-    const [studentData, setStudentData] = useState({prevStudentInfo
+    const [studentData, setStudentData] = useState({
+        firstName: '',
+        lastName: '',
+        address: '',
+        image: '',
+        email: '',
+        gpa: '',
     })
 
-     // The handleChange function is an event handler that gets triggered when the input fields change.
-    const handleChange = (event) => {
-        const {name, value} = event.target
+    // Use useEffect to update studentData when prevStudentInfo changes
+    useEffect(() => {
+        setStudentData({...prevStudentInfo})
+    }, [prevStudentInfo])
 
-        setStudentData((prevStudentInfo) => ({
-            ...prevStudentInfo, [name]:value
+     // The handleChange function is an event handler that gets triggered when the input fields change.
+     const handleChange = (event) => {
+        const {name, value} = event.target
+        setStudentData(prevState => ({
+            ...prevState,
+            [name]: value
         }))
     }
 
@@ -21,6 +35,8 @@ const UpdateStudent = ({prevStudentInfo}) => {
         const url = `http://localhost:8080/api/students/update/${prevStudentInfo.id}`
         dispatch(updateStudentThunk(url, studentData))
     }
+
+   
 
     return (
         <div>

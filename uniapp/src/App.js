@@ -20,14 +20,7 @@ const App = () => {
   // use that data elsewhere in our components without having the need to dispatch the actions
   // inside every component.
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchAllStudentsThunk());
-    dispatch(fetchAllCampusesThunk())
-    return () => {
-      dispatch({type: "CLEAR_ALL_STATES"})
-     }
-    
-  }, [dispatch]);
+  
   
   return (
     <Router>
