@@ -3,7 +3,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-
+import UpdateStudent from "./updateStudentInfo";
 const SingleStudentInfo = () => {
     const {id} = useParams()
     //console.log({id})
@@ -44,7 +44,7 @@ const SingleStudentInfo = () => {
              <h3 > <strong>GPA:</strong> {studentInfo.gpa}</h3>
              <h3 ><strong>Campus: </strong>{campusName}</h3>
              <p>  <Link className='tocampus-details' to = {`/singleCampus/${studentInfo.campusId}`} > {campusName} <strong>Details</strong></Link> </p>
-             <button>Edit Student Info</button>
+            <UpdateStudent prevStudentInfo={studentInfo}></UpdateStudent>
             
         </div>
     )

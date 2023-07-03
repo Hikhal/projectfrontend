@@ -15,7 +15,7 @@ export const updateStudentThunk = (url, student) => {
             const res = await axios.put(url, student)
             console.log(res)
             alert(`Student info update submitted.`);
-            dispatch(updateStudent(res.data))
+            dispatch(updateStudent(student))
         } catch (error) {
             console.log(error)
         }

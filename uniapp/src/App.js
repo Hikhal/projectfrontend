@@ -12,6 +12,8 @@ import { useDispatch } from 'react-redux';
 import './App.css';
 import { fetchAllStudentsThunk } from './reduxActions/fetchStudents';
 import { fetchAllCampusesThunk } from './reduxActions/fetchCampuses';
+import UpdateStudent from './components/updateStudentInfo';
+
 
 const App = () => {
   // we would want the state to update as we mount the App so that we could
@@ -64,6 +66,7 @@ const App = () => {
               the actual value that will be part of the URL when navigating to the 'SingleCampusInfo' route. */}
             <Route path="/singleCampus/:id" element={<SingleCampusInfo />} />
             <Route path="/singleStudent/:id" element={<SingleStudentInfo />} />
+            <Route path="/updateStudent/:id" element={<UpdateStudent />} />
           </Routes>
         </div>
       </div>
