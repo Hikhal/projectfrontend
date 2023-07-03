@@ -44,6 +44,7 @@ const SingleStudentInfo = () => {
              <h3 > <strong>GPA:</strong> {studentInfo.gpa}</h3>
              <h3 ><strong>Campus: </strong>{campusName}</h3>
              <p>  <Link className='tocampus-details' to = {`/singleCampus/${studentInfo.campusId}`} > {campusName} <strong>Details</strong></Link> </p>
+             <button>Edit Student Info</button>
             
         </div>
     )
