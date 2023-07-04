@@ -39,7 +39,7 @@ const UpdateStudent = ({prevStudentInfo}) => {
    
 
     return (
-        <div>
+        <div className='update'>
             <h2>Update Student</h2>
     <form onSubmit={handleSubmit}>
       <br />
@@ -103,7 +103,7 @@ const UpdateStudent = ({prevStudentInfo}) => {
         />
       </label>
       <br />
-      <button className='update-stu' type="submit">Update</button>
+      <button className='update-stu' type="submit">Update </button>
     </form>
         </div>
     )

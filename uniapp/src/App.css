@@ -255,12 +255,12 @@ body {
   border-radius: 4px;
   margin-bottom: 20px;
   width: 50rem; /* Adjust the width as needed */
-  height: 45rem; /* Adjust the height as needed */
+  height: 49rem; /* Adjust the height as needed */
 }
 
 .details img {
-  width: 15rem; /* Adjust the width as needed */
-  height: 15rem; /* Adjust the height as needed */
+  width: 12rem; /* Adjust the width as needed */
+  height: 12rem; /* Adjust the height as needed */
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 10px;
@@ -269,12 +269,12 @@ body {
 }
 
 .details h2 {
-  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-size: 1.2rem; /* Adjust the font size as needed */
   margin-bottom: 5px;
 }
 
 .details h3 {
-  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-size: 1.3rem; /* Adjust the font size as needed */
   margin-bottom: 5px;
 }
 
@@ -404,6 +404,44 @@ body {
 
 }
 /* update student from student view details */
+.update {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background:
+    linear-gradient(#333, transparent),
+    linear-gradient(to top left, grey, transparent),
+    linear-gradient(to top right, #ccc, transparent);
+  background-blend-mode: screen;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  width: 30rem;
+}
+
+.update h2 {
+  font-size: 1.5rem;
+  margin-bottom: -5px;
+}
+
+.update form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update label {
+  font-weight: bold;
+  margin-bottom: -19px;
+}
+
+.update input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
 .update-stu {
   display: inline-block;
   padding: 3.5px 20px;
@@ -412,7 +450,7 @@ body {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  margin-left: 50px;
+  margin-left: 40px;
   margin-top: 4px;
 }
 
@@ -421,6 +459,8 @@ body {
 
   box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
 }
+
+/* for button hover */
 button{
   position: relative;
   border: none;
