@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
@@ -50,6 +50,11 @@ const SingleCampusInfo = () => {
     const campusStudents = students.filter((student) => {
         return student.campusId == id
     })
+    const navigate = useNavigate()
+    const handleGoBack = () => {
+        navigate(`/allCampuses`)
+
+    }
 
     console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
@@ -81,6 +86,7 @@ const SingleCampusInfo = () => {
                 </div>
                 <br/>
                 <Link to="/addstudent" className='add-stu'>Add Student</Link>
+                <button onClick={handleGoBack}>Return Home</button>;
                 {/* <button className='add-stu' onClick={handleClick} > Add Student </button> */}
                 
 

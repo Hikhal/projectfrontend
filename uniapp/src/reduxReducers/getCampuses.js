@@ -4,7 +4,7 @@ const initialState = []
 const getAllCampusesReducer = (state = initialState, action)=>{
     switch(action.type){
         case 'FETCHCAMPUSES':
-            return state = action.payload
+            return action.payload
         case 'REMOVE_CAMPUS':
             return state.filter(campus => campus.id !== action.payload);
         default:
