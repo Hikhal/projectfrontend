@@ -5,16 +5,16 @@ import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 const AllStudents = () => {
     const dispatch=useDispatch();
     const listOfStudents = useSelector(state => state.getStudents )
+    useEffect(() => {
+      dispatch(fetchAllStudentsThunk());
+      
+    }, [dispatch]);
 
 
     const deleteStudent = (id) => {
       dispatch(removeStudentThunk(id));
     };
 
-    useEffect(() => {
-      dispatch(fetchAllStudentsThunk());
-      
-    }, [dispatch]);
 
     
     console.log(listOfStudents)
