@@ -56,6 +56,7 @@ body {
 
 .sidebar a:hover {
   color: #333;
+  
 }
 
 /* Adjustments for main content */
@@ -81,6 +82,8 @@ body {
 
 .navbar a:hover {
   color: #555;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 
 /* Home page CSS */
@@ -186,6 +189,8 @@ body {
 
 .input-form button:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 /*header, Student submit add button & Campus submit add button*/
 .header {
@@ -212,6 +217,8 @@ body {
 
 .add-link:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 
 /* view Detail button */
@@ -228,6 +235,8 @@ body {
 
 .viewDetails-link:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 
 /* View detail section of Student */
@@ -286,6 +295,8 @@ body {
 
 .tocampus-details:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 
 
@@ -297,7 +308,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust the height as needed */
+  height: 98vh; /* Adjust the height as needed */
 }
 
 .details-campus {
@@ -314,8 +325,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 25px;
-  width: 40rem; /* Adjust the width as needed */
-  height: 40rem; /* Adjust the height as needed */
+  width: 50rem; /* Adjust the width as needed */
+  height: 49rem; /* Adjust the height as needed */
 }
 
 .details-campus img {
@@ -346,12 +357,14 @@ body {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  margin-left: 0px;
+  margin-left: -60px;
   margin-top: 4px;
 }
 
 .add-stu:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 
 /* Remove Campus */
@@ -368,6 +381,8 @@ body {
 
 .remove:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 
 /* Remove Student */
@@ -386,6 +401,8 @@ body {
 
 .remove-Student:hover {
   background-color: grey;
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
+
 }
 /* update student from student view details */
 .update-stu {
@@ -402,7 +419,8 @@ body {
 
 .update-stu:hover {
   background: grey;
-  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+
+  box-shadow: 0 0 5px #2f4f4f, 0 0 25px #2f4f4f, 0 0 25px #5f9ea0, 0 0 100px black;
 }
 button{
   position: relative;

@@ -79,7 +79,9 @@ const SingleCampusInfo = () => {
                         )}
                     </div>
                 </div>
-                <button className='add-stu' onClick={handleClick} > Add Student </button>
+                <br/>
+                <Link to="/addstudent" className='add-stu'>Add Student</Link>
+                {/* <button className='add-stu' onClick={handleClick} > Add Student </button> */}
                 
 
             </div>
