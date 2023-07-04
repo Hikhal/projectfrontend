@@ -1,5 +1,5 @@
 
-.sidebar-links li a{
+.sidebar-links li a {
   padding: 12px;
   color: var(--text-color);
   font-size: 1.25rem;
@@ -10,13 +10,12 @@
   color: black;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Mulish;
 }
-
 
 body {
   margin: 0;
@@ -56,8 +55,8 @@ body {
 
 .sidebar a:hover {
   color: #333;
-  
 }
+
 
 /* Adjustments for main content */
 .content {
@@ -434,3 +433,4 @@ button::after{
   content: " ";
   z-index: -1;
 }
+

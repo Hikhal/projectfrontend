@@ -27,7 +27,6 @@ const App = () => {
       <div className="container">
         <nav className="sidebar">
           <span class ="expand-btn">
-            <img src="assests/chevron.svg" alt="Chevron" />
           </span>
           <div class ="sidebar-links">
               <ul>
