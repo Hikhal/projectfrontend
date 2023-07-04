@@ -103,7 +103,7 @@ const UpdateStudent = ({prevStudentInfo}) => {
         />
       </label>
       <br />
-      <button type="submit">Update</button>
+      <button className='update-stu' type="submit">Update</button>
     </form>
         </div>
     )

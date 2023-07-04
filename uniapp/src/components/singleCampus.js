@@ -54,6 +54,7 @@ const SingleCampusInfo = () => {
     console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
         students.length > 0 && (
+            <div className='parent-container'>
             <div className='details-campus'>
                {/* If showAddStudent is true, the <AddStudent> component is rendered.
                  If showAddStudent is false, the <AddStudent> component is not rendered.*/}
@@ -65,14 +66,14 @@ const SingleCampusInfo = () => {
                 <h1>Campus Description: {campus.description}</h1>
     
                 <div>
-                    <h2>Students:  </h2>
                     <div className=''>
                         {campusStudents.length === 0 ? (
                             <p>Campus does not contain students yet</p>
                         ) : (
                             campusStudents.map((item) => (
                                 <div key={item.id}>
-                                    <p><Link to={`/singleStudent/${item.id}`}> Name: {item.firstName}  {item.lastName} </Link></p>
+                                    <h2>Student: {item.firstName} {item.lastName}</h2>
+                                    <p><Link className='viewDetails-link' to={`/singleStudent/${item.id}`}>{item.firstName}  {item.lastName} Details</Link></p>
                                 </div>
                             ))
                         )}
@@ -82,6 +83,8 @@ const SingleCampusInfo = () => {
                 
 
             </div>
+            </div>
+
         )
     );
     

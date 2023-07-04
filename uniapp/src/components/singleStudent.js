@@ -35,7 +35,8 @@ const SingleStudentInfo = () => {
     const campusName = studentCamp ? studentCamp.name : "Not enrolled in any campus yet.";
    
     return (
-        <div className='details'>
+        <div className='parent-container'>
+            <div className='details'>
              <img src={studentInfo.image} alt=""/>
              <h3 > <strong>First Name:</strong>{studentInfo.firstName}</h3>
              <h3 > <strong>Last Name:  </strong>{studentInfo.lastName}</h3>
@@ -44,9 +45,12 @@ const SingleStudentInfo = () => {
              <h3 > <strong>GPA:</strong> {studentInfo.gpa}</h3>
              <h3 ><strong>Campus: </strong>{campusName}</h3>
              <p>  <Link className='tocampus-details' to = {`/singleCampus/${studentInfo.campusId}`} > {campusName} <strong>Details</strong></Link> </p>
+             <br/>
             <UpdateStudent prevStudentInfo={studentInfo}></UpdateStudent>
             
         </div>
+        </div>
+        
     )
 }
 
