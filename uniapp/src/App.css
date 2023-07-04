@@ -146,7 +146,9 @@ body {
 .card-info {
   text-align: center;
 }
-
+.cards h3{
+  font-size: 1rem;
+}
 /*add campus form & add student form */
 .input-form {
   display: flex;
@@ -304,14 +306,14 @@ body {
   overflow: hidden;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 20px;
-  width: 20rem; /* Adjust the width as needed */
-  height: 25rem; /* Adjust the height as needed */
+  margin-bottom: 25px;
+  width: 30rem; /* Adjust the width as needed */
+  height: 30rem; /* Adjust the height as needed */
 }
 
 .details-campus img {
-  width: 10rem; /* Adjust the width as needed */
-  height: 10rem; /* Adjust the height as needed */
+  width: 15rem; /* Adjust the width as needed */
+  height: 15rem; /* Adjust the height as needed */
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 10px;

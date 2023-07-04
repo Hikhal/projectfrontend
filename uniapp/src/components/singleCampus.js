@@ -65,7 +65,7 @@ const SingleCampusInfo = () => {
                 <h1>Campus Description: {campus.description}</h1>
     
                 <div>
-                    <h2>Students: </h2>
+                    <h2>Students:  </h2>
                     <div className=''>
                         {campusStudents.length === 0 ? (
                             <p>Campus does not contain students yet</p>
