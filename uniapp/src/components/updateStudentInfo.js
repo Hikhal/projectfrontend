@@ -2,8 +2,10 @@ import React, {useState, useEffect} from 'react'
 import { useDispatch , useSelector} from 'react-redux'
 import { updateStudentThunk } from '../reduxActions/updateStudent'
 import { fetchAllStudents } from '../reduxActions/fetchStudents'
+import { useNavigate } from 'react-router-dom'
 
 const UpdateStudent = ({prevStudentInfo}) => {
+    const navigate = useNavigate()
     const listStudents = useSelector(state => state.getStudents)
     console.log(prevStudentInfo)
     const dispatch = useDispatch()
@@ -34,6 +36,7 @@ const UpdateStudent = ({prevStudentInfo}) => {
         event.preventDefault()
         const url = `http://localhost:8080/api/students/update/${prevStudentInfo.id}`
         dispatch(updateStudentThunk(url, studentData))
+        navigate(-1)
     }
 
    

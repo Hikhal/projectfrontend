@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch, } from 'react-redux';
 import {addStudentThunk} from '../reduxActions/addStudent'
 import axios from 'axios'
 import { addStudent, fetchAllStudents, fetchAllStudentsThunk } from '../reduxActions/fetchStudents';
+import { useNavigate } from 'react-router-dom';
 //import { addStudentThunk } from '../reduxActions/addStudent'
 
 /**
@@ -15,6 +16,7 @@ import { addStudent, fetchAllStudents, fetchAllStudentsThunk } from '../reduxAct
 
 // -- passing in a campusID prop so that when needed the student is assigned to a campus as well.
 const AddStudent = ({campusid}) => {
+    const navigate = useNavigate()
     const dispatch=useDispatch();
     const [firstName, setfirstname] = useState("")
     const [lastName, setlastname] = useState("")
@@ -109,6 +111,7 @@ const AddStudent = ({campusid}) => {
         const url = campusid ? `http://localhost:8080/api/campuses/${campusid}`:'http://localhost:8080/api/students'
 
         dispatch(addStudentThunk(url,newStudent))
+        navigate(-1)
         // dispatch(fetchAllStudents(newStudent));
     }
 

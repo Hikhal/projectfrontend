@@ -3,8 +3,21 @@ const updateStudentReducer = (state = initialState, action) => {
     switch(action.type){
         case 'UPDATE_STUDENT':
             const updatedStudent = action.payload // this will hold updated students info
-            const newState = state.filter(student => student.id !== updatedStudent.id)
-            return [...newState, updatedStudent]
+           
+             // find the pos of the student inside of the state array
+
+            //  const newState = state.filter(student => student.id !== updatedStudent.id)
+            //  return [...newState, updatedStudent]
+            const index = state.findIndex(student => student.id === updatedStudent.id)
+
+            // if the student exists, update their information, else add the updated student to the state.
+            if(index !== -1 ){
+                const newState = [...state]
+                newState[index] = updatedStudent
+                return newState
+            }else{
+                return [...state, updatedStudent]
+            }
         default:
             return state
     }
