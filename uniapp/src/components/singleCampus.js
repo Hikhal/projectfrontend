@@ -29,7 +29,7 @@ const SingleCampusInfo = () => {
     useEffect(()=>{
         async function getCamp(){
             try {
-                const campInfo = await axios.get(`http://localhost:8080/api/campuses/${id}`)
+                const campInfo = await axios.get(`process.env.REACT_APP_BACKEND_URLREACT_APP_BACKEND_URL/api/campuses/${id}`)
                 console.log(campInfo.data)
                 setCampus(campInfo.data)
             } catch (error) {
