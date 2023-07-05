@@ -26,7 +26,8 @@ const AllStudents = () => {
           <Link to="/addstudent" className='add-link'>Add Student</Link>
           
         <div className="card-container">
-          {listOfStudents.map((item) => (
+          {listOfStudents.length>0?
+          listOfStudents.map((item) => (
             <div key={item.id} className="cards">
               <img src={item.image} alt="Student" className="cards-image" />
               <span className="student-info">
@@ -43,7 +44,7 @@ const AllStudents = () => {
                 </div>
               </span>
             </div>
-          ))}
+          )):<h3>No Students In This Uni. Click "ADD STUDENT" to add student</h3>}
         </div>
       </div>
     );
