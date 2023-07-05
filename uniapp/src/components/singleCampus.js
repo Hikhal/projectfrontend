@@ -4,6 +4,9 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import AddStudent from './addstudent';
+import UpdateCampus from './updateCampusInfo.js';
+import UpdateStudent from './updateStudentInfo';
+
 
 // This is a functional component for displaying individual campus information
 const SingleCampusInfo = () => {
@@ -58,8 +61,8 @@ const SingleCampusInfo = () => {
 
     console.log("Campus Students -->", campusStudents) // should print out students having the same campusId as the param, id
     return (
-        students.length > 0 && (
-            <div className='parent-container'>
+            (
+            // <div className='parent-container'>
             <div className='details-campus'>
                {/* If showAddStudent is true, the <AddStudent> component is rendered.
                  If showAddStudent is false, the <AddStudent> component is not rendered.*/}
@@ -85,13 +88,14 @@ const SingleCampusInfo = () => {
                     </div>
                 </div>
                 <br/>
-                <Link to="/addstudent" className='add-stu'>Add Student</Link>
+                {/* <Link to="/addstudent" className='add-stu'>Add Student</Link> */}
                 <button onClick={handleGoBack}>Return Home</button>;
-                {/* <button className='add-stu' onClick={handleClick} > Add Student </button> */}
+                <button className='add-stu' onClick={handleClick} > Add Student </button>
+                <UpdateCampus previousCampusInfo={campus}></UpdateCampus>
                 
 
             </div>
-            </div>
+            // </div>
 
         )
     );

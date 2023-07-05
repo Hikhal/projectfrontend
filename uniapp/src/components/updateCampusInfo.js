@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useDispatch , useSelector} from 'react-redux'
 import { updateCampusThunk } from '../reduxActions/updateCampus'
-import { fetchAllStudents } from '../reduxActions/fetchStudents'
+
 
 const UpdateCampus = ({previousCampusInfo}) => {
     const listCampuses = useSelector(state => state.getStudents)
@@ -42,7 +42,7 @@ const UpdateCampus = ({previousCampusInfo}) => {
     <form onSubmit={handleSubmit}>
       <br />
       <label>
-        Campu Name:
+        Campus Name:
         <input
           type="text"
           name="name"
@@ -55,8 +55,8 @@ const UpdateCampus = ({previousCampusInfo}) => {
         Description:
         <input
           type="text"
-          name="lastName"
-          value={campusData.lastName}
+          name="description"
+          value={campusData.description}
           onChange={handleChange}
         />
       </label>
@@ -75,8 +75,8 @@ const UpdateCampus = ({previousCampusInfo}) => {
         Image:
         <input
           type="text"
-          name="image"
-          value={campusData.image}
+          name="img"
+          value={campusData.img}
           onChange={handleChange}
         />
       </label>
