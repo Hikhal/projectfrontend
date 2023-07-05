@@ -10,6 +10,7 @@ import UpdateStudent from './updateStudentInfo';
 
 // This is a functional component for displaying individual campus information
 const SingleCampusInfo = () => {
+
     // Here the 'useParams' hook provided by react-router-dom is used to get the route parameters.
 
     // The 'id' variable now contains the actual 'id' passed in the URL
@@ -28,6 +29,10 @@ const SingleCampusInfo = () => {
     const handleClick = () => {
       setShowAddStudent(true);
     };
+
+    const updatecampus=(payload)=>{
+        setCampus(payload);
+    }
 
     useEffect(()=>{
         async function getCamp(){
@@ -91,7 +96,7 @@ const SingleCampusInfo = () => {
                 {/* <Link to="/addstudent" className='add-stu'>Add Student</Link> */}
                 <button onClick={handleGoBack}>Return Home</button>;
                 <button className='add-stu' onClick={handleClick} > Add Student </button>
-                <UpdateCampus previousCampusInfo={campus}></UpdateCampus>
+                <UpdateCampus previousCampusInfo={campus} updateCampus={updatecampus}></UpdateCampus>
                 
 
             </div>

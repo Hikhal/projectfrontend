@@ -3,7 +3,7 @@ import { useDispatch , useSelector} from 'react-redux'
 import { updateCampusThunk } from '../reduxActions/updateCampus'
 
 
-const UpdateCampus = ({previousCampusInfo}) => {
+const UpdateCampus = ({previousCampusInfo, updateCampus}) => {
     const listCampuses = useSelector(state => state.getStudents)
 
     const dispatch = useDispatch()
@@ -32,6 +32,7 @@ const UpdateCampus = ({previousCampusInfo}) => {
         event.preventDefault()
         const url = `http://localhost:8080/api/campuses/update/${previousCampusInfo.id}`
         dispatch(updateCampusThunk(url, campusData))
+        updateCampus(campusData)
     }
 
    
