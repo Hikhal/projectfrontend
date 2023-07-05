@@ -26,7 +26,8 @@ const AllCampuses = () => {
         <Link to="/addCampus" className='add-link'>Add Campus</Link>
 
         <div className="card-container">
-        {listOfCampuses.map((item) => (
+        {listOfCampuses.length>0?
+        listOfCampuses.map((item) => (
           <div key={item.name} className="cards">
             <img src={item.img} alt="Campus" className="cards-image" />
             <div className="info-item">
@@ -39,7 +40,8 @@ const AllCampuses = () => {
             {/* Remove Campus */}
             <button className='remove' onClick={() => deleteCampus(item.id)}>Delete</button>
           </div>
-        ))}
+        )):(<h3>No Campuses In This Uni. Click "ADD CAMPUS" to add campus</h3>)
+      }
         </div>
       </div>
     );
