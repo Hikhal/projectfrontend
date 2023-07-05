@@ -1,12 +1,23 @@
 import React, {useEffect, useState} from "react";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import UpdateStudent from "./updateStudentInfo";
+import { removeStudentThunk } from "../reduxActions/fetchStudents";
 const SingleStudentInfo = () => {
     const {id} = useParams()
     //console.log({id})
+
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const deleteStudent = (id) => {
+        dispatch(removeStudentThunk(id));
+        // go back to prev page
+        navigate(-1) // navigates to the prev page which is the allStudents page.
+      };
+  
 
     const [studentInfo, setStudentInfo] = useState("")
     // useEffect
@@ -46,6 +57,8 @@ const SingleStudentInfo = () => {
              <h3 ><strong>Campus: </strong>{campusName}</h3>
              <p>  <Link className='tocampus-details' to = {`/singleCampus/${studentInfo.campusId}`} > {campusName} <strong>Details</strong></Link> </p>
              <br/>
+               {/* Remove Student */}
+               <button className='remove-Student' onClick={() => deleteStudent(id)}>Delete</button>
             <UpdateStudent prevStudentInfo={studentInfo}></UpdateStudent>
             
         </div>

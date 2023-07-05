@@ -38,8 +38,8 @@ const AllStudents = () => {
                   <br/>
                   <Link className='viewDetails-link' to={`/singleStudent/${item.id}`} >View Details</Link>
                   <p/>
-                  {/* Remove Student */}
-                  <button className='remove-Student' onClick={() => deleteStudent(item.id)}>Delete</button>
+                  {/* Remove Student
+                  <button className='remove-Student' onClick={() => deleteStudent(item.id)}>Delete</button> */}
                 </div>
               </span>
             </div>
