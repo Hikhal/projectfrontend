@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import { useDispatch, } from 'react-redux';
 import {addStudentThunk} from '../reduxActions/addStudent'
-import axios from 'axios'
-import { addStudent, fetchAllStudents, fetchAllStudentsThunk } from '../reduxActions/fetchStudents';
 import { useNavigate } from 'react-router-dom';
 //import { addStudentThunk } from '../reduxActions/addStudent'
 

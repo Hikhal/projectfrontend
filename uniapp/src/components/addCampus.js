@@ -86,7 +86,7 @@ const AddCampus = () => {
 
 
         try {
-            const post = await axios.post('process.env.REACT_APP_BACKEND_URLREACT_APP_BACKEND_URL/api/campuses', campus)
+            await axios.post('process.env.REACT_APP_BACKEND_URLREACT_APP_BACKEND_URL/api/campuses', newcampus)
             alert(`Campus "${name}" Added`);
         } catch (error) {
             console.log(error)

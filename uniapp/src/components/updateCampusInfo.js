@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import { useDispatch , useSelector} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { updateCampusThunk } from '../reduxActions/updateCampus'
 
 
 const UpdateCampus = ({previousCampusInfo, updateCampus}) => {
-    const listCampuses = useSelector(state => state.getStudents)
+    //const listCampuses = useSelector(state => state.getStudents)
 
     const dispatch = useDispatch()
     const [campusData, setcampusData] = useState({

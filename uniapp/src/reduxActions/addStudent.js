@@ -1,12 +1,12 @@
 import axios from 'axios'
-import { fetchAllStudents } from './fetchStudents'
+
 const ADD_STUDENT = 'ADD_STUDENT'
 
 
 // action creator
 export const add_student = (student) =>{
     return {
-        type: "ADD_STUDENT",
+        type: ADD_STUDENT,
         "payload": student
     }
 

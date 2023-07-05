@@ -2,10 +2,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as  Link} from "react-router-dom";
 import AddStudent from './addstudent';
 import UpdateCampus from './updateCampusInfo.js';
-import UpdateStudent from './updateStudentInfo';
 
 
 // This is a functional component for displaying individual campus information
@@ -56,7 +55,7 @@ const SingleCampusInfo = () => {
     // Now the goal is to display the students by campuses, this can be achieved by filtering the array by matching the campusId and only displaying those students.
 
     const campusStudents = students.filter((student) => {
-        return student.campusId == id
+        return student.campusId === id
     })
     const navigate = useNavigate()
     const handleGoBack = () => {

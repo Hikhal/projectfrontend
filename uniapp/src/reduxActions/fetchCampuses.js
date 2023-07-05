@@ -32,7 +32,7 @@ export const fetchAllCampusesThunk = () => {
 export const removeCampusThunk=(id)=>{
     return async (dispatch)=>{
         try{
-            const deletethis=await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/campuses/delete/${id}`);
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/campuses/delete/${id}`);
             dispatch(removeCampus(id))
         }catch (error){
             console.log(error);

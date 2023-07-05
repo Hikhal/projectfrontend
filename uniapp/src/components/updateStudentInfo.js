@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import { useDispatch , useSelector} from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { updateStudentThunk } from '../reduxActions/updateStudent'
-import { fetchAllStudents } from '../reduxActions/fetchStudents'
+
 import { useNavigate } from 'react-router-dom'
 
 const UpdateStudent = ({prevStudentInfo}) => {
     const navigate = useNavigate()
-    const listStudents = useSelector(state => state.getStudents)
+    //const listStudents = useSelector(state => state.getStudents)
     console.log(prevStudentInfo)
     const dispatch = useDispatch()
     const [studentData, setStudentData] = useState({
