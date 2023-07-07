@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-
+import { useNavigate } from 'react-router-dom'
 /**
  * The component contains an input field for each attribute of a camopus (name, address, image, description). 
  * It uses React hooks to maintain state for each of these fields and updates these state variables whenever the corresponding input field changes.
@@ -14,7 +14,9 @@ const AddCampus = () => {
     const [img, setimage] = useState("")
     const [address, setaddress] = useState("")
     const [description, setdescription] = useState("")
-    const [newcampus, setnewcampus] = useState(undefined)
+    const [newcampus, setnewcampus] = useState("")
+    const navigate = useNavigate()
+    
 
     const setName = (event) => {
         setname(event.target.value)
@@ -86,11 +88,12 @@ const AddCampus = () => {
 
 
         try {
-            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/campuses`, newcampus)
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL_1}/api/campuses`, newcampus)
             alert(`Campus "${name}" Added`);
         } catch (error) {
             console.log(error)
         }
+        navigate(-1)
     }
 
     // Bug found on line 65, onSumbit was missing.
