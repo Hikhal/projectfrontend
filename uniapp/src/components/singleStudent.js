@@ -11,13 +11,12 @@ const SingleStudentInfo = () => {
 
 
     const dispatch = useDispatch()
-    //const navigate = useNavigate()
+    const navigate = useNavigate()
     const deleteStudent = (id) => {
         dispatch(removeStudentThunk(id));
         // go back to prev page
-         // navigates to the prev page which is the allStudents page.
+        navigate(-1) // navigates to the prev page which is the allStudents page.
       };
-
   
 
     const [studentInfo, setStudentInfo] = useState("")
