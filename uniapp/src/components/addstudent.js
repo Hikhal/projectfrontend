@@ -86,7 +86,8 @@ const AddStudent = ({campusid}) => {
             address,
             image,
             email,
-            gpa
+            gpa,
+            campusId:campusid
         }
 
         //

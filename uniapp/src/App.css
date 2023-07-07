@@ -308,6 +308,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 98vh; /* Adjust the height as needed */
+  overflow-x: auto;
 }
 
 .details-campus {

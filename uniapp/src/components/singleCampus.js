@@ -48,15 +48,10 @@ const SingleCampusInfo = () => {
     } ,[id])
     
     // getting the list of the students from the redux store
-    const students = useSelector(state => state.getStudents)
-    // logging to see if the students list is retrieved 
-    console.log("students -->", students)
-
-    // Now the goal is to display the students by campuses, this can be achieved by filtering the array by matching the campusId and only displaying those students.
-
-    const campusStudents = students.filter((student) => {
-        return student.campusId === id
+    const campusStudents = useSelector(state => state.getStudents).filter((student) => {
+        return student.campusId == id
     })
+    
     const navigate = useNavigate()
     const handleGoBack = () => {
         navigate(`/allCampuses`)

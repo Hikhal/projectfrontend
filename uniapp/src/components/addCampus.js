@@ -80,19 +80,18 @@ const AddCampus = () => {
 
         setnewcampus(campus) // just in case we need it smwhere else, not really necessary
 
+
+        try {
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL_1}/api/campuses`, campus)
+            alert(`Campus "${name}" Added`);
+        } catch (error) {
+            console.log(error)
+        }
         // clearing input fields for next input
         setname("")
         setimage("")
         setaddress("")
         setdescription("")
-
-
-        try {
-            await axios.post(`${process.env.REACT_APP_BACKEND_URL_1}/api/campuses`, newcampus)
-            alert(`Campus "${name}" Added`);
-        } catch (error) {
-            console.log(error)
-        }
         navigate(-1)
     }
 
