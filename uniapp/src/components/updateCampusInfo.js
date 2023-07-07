@@ -30,7 +30,7 @@ const UpdateCampus = ({previousCampusInfo, updateCampus}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        const url = `${process.env.REACT_APP_BACKEND_URL_1}/api/campuses/update/${previousCampusInfo.id}`
+        const url = `${process.env.REACT_APP_BACKEND_URL}/api/campuses/update/${previousCampusInfo.id}`
         dispatch(updateCampusThunk(url, campusData))
         updateCampus(campusData)
     }

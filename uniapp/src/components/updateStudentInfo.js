@@ -34,7 +34,7 @@ const UpdateStudent = ({prevStudentInfo}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        const url = `${process.env.REACT_APP_BACKEND_URL_1}/api/students/update/${prevStudentInfo.id}`
+        const url = `${process.env.REACT_APP_BACKEND_URL}/api/students/update/${prevStudentInfo.id}`
         dispatch(updateStudentThunk(url, studentData))
         navigate(-1)
     }

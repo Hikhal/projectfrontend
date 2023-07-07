@@ -106,7 +106,7 @@ const AddStudent = ({campusid}) => {
         // Posting the newStudent object to the server which then would handle the database submission
         // the url for the api call is based on whether a campusid is provided or not
 
-        const url = campusid ? `${process.env.REACT_APP_BACKEND_URL_1}/api/campuses/${campusid}`:`${process.env.REACT_APP_BACKEND_URL_1}/api/students`
+        const url = campusid ? `${process.env.REACT_APP_BACKEND_URL}/api/campuses/${campusid}`:`${process.env.REACT_APP_BACKEND_URL}/api/students`
 
         dispatch(addStudentThunk(url,newStudent))
         navigate(-1)
