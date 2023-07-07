@@ -25,7 +25,7 @@ const SingleStudentInfo = () => {
     useEffect(()=>{
         async function getStudentInfo(){
             try {
-                const info = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/students/${id}`)
+                const info = await axios.get(`${process.env.REACT_APP_BACKEND_URL_1}/api/students/${id}`)
                 setStudentInfo(info.data)
             } catch (error) {
                 console.error(error)

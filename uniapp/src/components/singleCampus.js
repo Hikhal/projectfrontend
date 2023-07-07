@@ -36,7 +36,7 @@ const SingleCampusInfo = () => {
     useEffect(()=>{
         async function getCamp(){
             try {
-                const campInfo = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/campuses/${id}`)
+                const campInfo = await axios.get(`${process.env.REACT_APP_BACKEND_URL_1}/api/campuses/${id}`)
                 console.log(campInfo.data)
                 setCampus(campInfo.data)
             } catch (error) {
