@@ -20,7 +20,7 @@ export const fetchAllCampuses = (payload) => {
 export const fetchAllCampusesThunk = () => {
     return async (dispatch) => {
         try {
-            const datalist = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/campuses`)
+            const datalist = await axios.get(`${process.env.REACT_APP_BACKEND_URL_1}/api/campuses`)
             console.log(datalist.data)
             dispatch(fetchAllCampuses(datalist.data))
         } catch (error) {
@@ -32,7 +32,7 @@ export const fetchAllCampusesThunk = () => {
 export const removeCampusThunk=(id)=>{
     return async (dispatch)=>{
         try{
-            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/campuses/delete/${id}`);
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL_1}/api/campuses/delete/${id}`);
             dispatch(removeCampus(id))
         }catch (error){
             console.log(error);
