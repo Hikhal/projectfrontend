@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import {BrowserRouter as  Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import AddStudent from './addstudent';
 import UpdateCampus from './updateCampusInfo.js';
 
