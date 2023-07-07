@@ -327,6 +327,7 @@ body {
   margin-bottom: 25px;
   width: 50rem; /* Adjust the width as needed */
   height: 49rem; /* Adjust the height as needed */
+  overflow: auto;
 }
 
 .details-campus img {
