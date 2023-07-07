@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import {BrowserRouter as Link} from "react-router-dom";
 import UpdateStudent from "./updateStudentInfo";
 import { removeStudentThunk } from "../reduxActions/fetchStudents";
